@@ -8,76 +8,289 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+      background: linear-gradient(to bottom, #ffffff 0%, #f5f7ff 50%, #eff0ff 100%);
+      color: #1d1d1f;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     /* NAV */
     nav {
       position: sticky;
       top: 0;
-      background: #111827;
-      padding: 15px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(30px);
+      padding: 14px 0;
       z-index: 1000;
+      border-bottom: 1px solid rgba(0, 113, 227, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 45px;
       margin: 0;
       padding: 0;
     }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #38bdf8; }
+    nav a {
+      color: #1d1d1f;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      letter-spacing: 0.5px;
+    }
+    nav a:hover {
+      color: #0071e3;
+    }
 
     /* HEADER */
     header {
-      background: linear-gradient(135deg, #1f2933, #111827);
-      color: #fff;
-      padding: 80px 20px;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+      color: #1d1d1f;
+      padding: 140px 20px;
       text-align: center;
+      border-bottom: 2px solid rgba(0, 113, 227, 0.1);
+      position: relative;
+      overflow: hidden;
     }
-    header h1 { font-size: 44px; }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    header h1 {
+      font-size: 64px;
+      margin: 0 0 16px 0;
+      font-weight: 800;
+      letter-spacing: -1px;
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(135deg, #0071e3, #00a8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p {
+      font-size: 18px;
+      margin: 8px 0;
+      color: #555555;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #38bdf8;
-      color: #000;
+      margin-top: 35px;
+      padding: 13px 38px;
+      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
+      color: #fff;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
+      border-radius: 980px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 30px rgba(0, 113, 227, 0.25);
+      position: relative;
+      z-index: 1;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(0, 113, 227, 0.35);
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1100px;
+      padding: 120px 20px;
+      max-width: 1280px;
       margin: auto;
     }
-    h2 { border-bottom: 3px solid #111827; display: inline-block; margin-bottom: 30px; }
+    #education {
+      background: linear-gradient(to right, rgba(0, 200, 100, 0.05), rgba(0, 150, 200, 0.05));
+    }
+    #experience {
+      background: linear-gradient(to right, rgba(255, 150, 0, 0.05), rgba(255, 100, 50, 0.05));
+    }
+    #projects {
+      background: linear-gradient(to right, rgba(0, 100, 200, 0.05), rgba(100, 50, 200, 0.05));
+    }
+    #skills {
+      background: linear-gradient(to right, rgba(200, 50, 100, 0.05), rgba(255, 100, 0, 0.05));
+    }
+    #certifications {
+      background: linear-gradient(to right, rgba(100, 200, 100, 0.05), rgba(50, 150, 100, 0.05));
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 70px;
+      text-align: center;
+      color: #1d1d1f;
+      border: none;
+      letter-spacing: -0.7px;
+    }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
     }
     .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
+      padding: 45px;
+      border-radius: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid rgba(0, 113, 227, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #0071e3, #00a8ff, #06b6d4);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .card:hover {
+      background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+      transform: translateY(-12px);
+      box-shadow: 0 12px 40px rgba(0, 113, 227, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
+      border-color: rgba(0, 113, 227, 0.25);
+    }
+    .card:hover::before {
+      opacity: 1;
+    }
+    #education .card {
+      border-left: 5px solid #00c864;
+    }
+    #education .card:hover {
+      border-left-color: #34c759;
+      box-shadow: 0 12px 40px rgba(0, 200, 100, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+    #experience .card {
+      border-left: 5px solid #ff9500;
+    }
+    #experience .card:hover {
+      border-left-color: #ff9500;
+      box-shadow: 0 12px 40px rgba(255, 150, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+    #projects .card {
+      border-left: 5px solid #0071e3;
+    }
+    #projects .card:hover {
+      border-left-color: #0077ed;
+      box-shadow: 0 12px 40px rgba(0, 113, 227, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+    .card h3 {
+      color: #1d1d1f;
+      margin: 0 0 14px 0;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+    }
+    .card p {
+      color: #666666;
+      margin: 14px 0;
+      font-size: 15px;
+      line-height: 1.7;
+      letter-spacing: 0.2px;
+    }
+    .card strong {
+      color: #0071e3;
+      font-weight: 700;
+    }
+    .card a {
+      color: #0071e3;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card a::after {
+      content: '→';
+      transition: transform 0.3s ease;
+    }
+    .card a:hover {
+      color: #0077ed;
+    }
+    .card a:hover::after {
+      transform: translateX(4px);
+    }
+    .card ul {
+      margin: 20px 0;
+      padding-left: 0;
+    }
+    .card li {
+      margin: 12px 0;
+      color: #666666;
+      font-size: 14px;
+      line-height: 1.7;
+      padding-left: 20px;
+      position: relative;
+    }
+    .card li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: #0071e3;
+      font-size: 6px;
+      top: 8px;
     }
 
-    ul.skills { columns: 2; }
+    ul.skills {
+      columns: 2;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+    }
+    ul.skills li {
+      background: linear-gradient(135deg, #f0f7ff 0%, #f5f5ff 100%);
+      color: #0071e3;
+      padding: 14px 16px;
+      margin: 12px 0;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: block;
+      text-align: center;
+      border: 2px solid rgba(0, 113, 227, 0.2);
+      box-shadow: 0 2px 8px rgba(0, 113, 227, 0.05);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    ul.skills li:hover {
+      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
+      color: #ffffff;
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 113, 227, 0.25);
+      border-color: rgba(0, 113, 227, 0.5);
+    }
 
     footer {
-      background: #111827;
-      color: #fff;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(240, 244, 255, 0.8) 100%);
+      color: #666666;
       text-align: center;
-      padding: 25px;
+      padding: 50px 20px;
+      border-top: 2px solid rgba(0, 113, 227, 0.1);
+      font-size: 13px;
+      letter-spacing: 0.3px;
     }
 
     /* CHATBOT */
@@ -85,63 +298,122 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 300px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 370px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0, 113, 227, 0.2);
       display: none;
       flex-direction: column;
       overflow: hidden;
+      animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid rgba(0, 113, 227, 0.15);
+    }
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
     .chatbot-header {
-      background: #111827;
-      color: #fff;
-      padding: 15px;
-      font-weight: bold;
+      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
+      color: #ffffff;
+      padding: 22px;
+      font-weight: 700;
       text-align: center;
+      font-size: 15px;
+      letter-spacing: 0.3px;
     }
     .chatbot-messages {
-      padding: 15px;
-      height: 250px;
+      padding: 22px;
+      height: 340px;
       overflow-y: auto;
       font-size: 14px;
+      background: #fafbff;
     }
-    .msg.bot { color: #111827; margin-bottom: 10px; }
-    .msg.user { color: #2563eb; margin-bottom: 10px; text-align: right; }
+    .msg.bot {
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      background: #f0f4ff;
+      border-radius: 14px;
+      border: none;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .msg.user {
+      color: #ffffff;
+      margin-bottom: 16px;
+      text-align: right;
+      padding: 12px 16px;
+      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
+      border-radius: 14px;
+      margin-left: 50px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
     .chatbot-input {
       display: flex;
-      border-top: 1px solid #ddd;
+      border-top: 2px solid rgba(0, 113, 227, 0.1);
+      background: #ffffff;
     }
     .chatbot-input input {
       flex: 1;
-      padding: 10px;
+      padding: 14px 16px;
       border: none;
       outline: none;
+      font-size: 14px;
+      background: transparent;
+      font-family: inherit;
+    }
+    .chatbot-input input::placeholder {
+      color: #a1a1a6;
     }
     .chatbot-input button {
-      background: #38bdf8;
+      background: transparent;
       border: none;
-      padding: 10px 15px;
+      padding: 14px 16px;
       cursor: pointer;
+      color: #0071e3;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+    .chatbot-input button:hover {
+      opacity: 0.7;
     }
     .chat-toggle {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #38bdf8;
-      color: #000;
+      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
+      color: #ffffff;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 26px;
+      width: 72px;
+      height: 72px;
+      font-size: 30px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 12px 32px rgba(0, 113, 227, 0.4);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 600;
+    }
+    .chat-toggle:hover {
+      box-shadow: 0 16px 48px rgba(0, 113, 227, 0.5);
+      transform: scale(1.08);
     }
 
     @media (max-width: 600px) {
       ul.skills { columns: 1; }
-      nav ul { flex-direction: column; }
+      nav ul { flex-direction: column; gap: 12px; }
+      header h1 { font-size: 44px; }
+      .grid { grid-template-columns: 1fr; }
+      .chatbot { width: 92vw; }
+      section { padding: 70px 20px; }
+      h2 { font-size: 36px; }
     }
   </style>
 </head>
@@ -150,6 +422,7 @@
 <nav>
   <ul>
     <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -159,80 +432,213 @@
 
 <header>
   <h1>Prabhat Dhar</h1>
-  <p>Data Analyst | Python | SQL | Power BI | ML | CI/CD</p>
-  <p>East Ham, Greater London • Eligible to work in UK</p>
+  <p>Data Analyst | Python | SQL | Power BI | Machine Learning | MLOps | DevOps</p>
+  <p>London, UK • prabhatdhar32@gmail.com</p>
   <a class="btn" href="Prabhatcv.pdf" download>Download CV</a>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I am a Data Analyst with hands-on experience in SQL, Python, data visualisation, and machine learning. I enjoy automating workflows, building dashboards, and translating complex data into actionable insights. I am actively transitioning into DevOps, focusing on CI/CD automation and cloud tooling.</p>
+  <p>Aspiring Data Analyst with a strong foundation in Python, SQL, and data visualisation, supported by academic projects and practical experience working with real datasets. Skilled in data cleaning, exploratory analysis, and building dashboards to generate insights. Currently working in the UK and seeking an entry-level data analyst opportunity to apply analytical and problem-solving skills in a professional environment.</p>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>PG Diploma in Data Science and Its Application</h3>
+      <p><strong>University of Essex, Colchester, UK</strong></p>
+      <p>November 2022 • 165 Credits</p>
+    </div>
+    <div class="card">
+      <h3>Bachelor's in Physics</h3>
+      <p><strong>University of Calcutta, West Bengal, India</strong></p>
+      <p>August 2021 • 7.240 CGPA</p>
+    </div>
+    <div class="card">
+      <h3>I.S.C (12th)</h3>
+      <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
+      <p>April 2017 • 85%</p>
+    </div>
+    <div class="card">
+      <h3>I.C.S.E (10th)</h3>
+      <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
+      <p>April 2015 • 93.8%</p>
+    </div>
+  </div>
 </section>
 
 <section id="experience">
   <h2>Work Experience</h2>
   <div class="grid">
     <div class="card">
-      <h3>Everycare Ltd — Data Analyst & Care Assistant</h3>
-      <p><strong>2023 – Present</strong></p>
-      <p>Excel & Python data cleaning, Power BI dashboards, GDPR-compliant reporting.</p>
+      <h3>Care Assistant — Everycare Ltd</h3>
+      <p><strong>April 2023 – Present</strong></p>
+      <ul>
+        <li>Maintained and updated care records using digital systems and Excel</li>
+        <li>Created simple reports using Excel (pivot tables, basic analysis)</li>
+        <li>Identified patterns in attendance and incident logs to support staff planning</li>
+        <li>Ensured accurate data entry and data integrity in line with GDPR</li>
+      </ul>
     </div>
     <div class="card">
-      <h3>KFC — Team Member</h3>
-      <p><strong>2021 – 2023</strong></p>
-      <p>High-pressure operations, reporting, teamwork & customer service.</p>
-    </div>
-    <div class="card">
-      <h3>Chaiiwala — Crew Member</h3>
-      <p><strong>2022</strong></p>
-      <p>POS systems, inventory handling, customer experience.</p>
+      <h3>Team Member — KFC (Demipower Ltd, Wood Green)</h3>
+      <p><strong>January 2021 – March 2023</strong></p>
+      <ul>
+        <li>Delivered fast, friendly service in a high-pressure environment</li>
+        <li>Upheld hygiene, safety and quality standards</li>
+        <li>Handled transactions and managed orders during peak periods</li>
+        <li>Developed reliability, punctuality, teamwork and communication skills</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
+  <h2>Key Projects</h2>
   <div class="grid">
     <div class="card">
-      <h3>A&E Data Analysis</h3>
-      <p>SQL, Python, Power BI, Tableau, ML forecasting</p>
-      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+      <h3>Health and Fitness AI App</h3>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Health-and-Fitness-AI-App" target="_blank">View Project</a></p>
+      <p>AI-powered health and fitness application providing personalized recommendations, fitness tracking, and wellness insights. Integrated ML algorithms to analyze workout history, nutrition, sleep patterns, and goals.</p>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, TensorFlow, PyTorch, Streamlit, Matplotlib, Seaborn, Plotly</p>
     </div>
     <div class="card">
-      <h3>CI/CD Pipelines</h3>
-      <p>Python, SQL & Excel automated pipelines</p>
-      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+      <h3>Rainfall Prediction Using ML Models</h3>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Rainfall-prediction" target="_blank">View Project</a></p>
+      <p>Dissertation project forecasting rainfall based on historical Australian weather patterns. Implemented multiple algorithms (Logistic Regression, Random Forest, Gradient Boosting, Neural Networks) with comprehensive EDA and evaluation.</p>
+      <p><strong>Tech Stack:</strong> Python, PyCaret, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly</p>
+    </div>
+    <div class="card">
+      <h3>Data Analysis for DevOps, MLOps & GenAI</h3>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/DATA-ANALYSIS-FOR-DEVOPS-MLOPS-GENAI" target="_blank">View Project</a></p>
+      <p>Production-ready sales forecasting system combining ML, generative AI, and DevOps practices. Built end-to-end ML pipeline, REST API with FastAPI, containerized with Docker, deployed with Kubernetes and Jenkins CI/CD.</p>
+      <p><strong>Tech Stack:</strong> Python, SQLite, FastAPI, Docker, Kubernetes, Jenkins, OpenAI GPT-4, Power BI</p>
     </div>
     <div class="card">
       <h3>Banking Churn Prediction</h3>
-      <p>EDA, ML models, ROC evaluation</p>
-      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Banking-Churn-Prediction" target="_blank">View Project</a></p>
+      <p>Full end-to-end banking customer churn analysis using synthetic data. Comprehensive exploratory data analysis, feature engineering, multiple ML models, and evaluation metrics (ROC-AUC, confusion matrices, classification reports).</p>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
     </div>
     <div class="card">
-      <h3>Rainfall Prediction (Dissertation)</h3>
-      <p>PyCaret AutoML + deployed web app</p>
-      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+      <h3>Credit Card Fraud Detection</h3>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Credit-Card-Analysis" target="_blank">View Project</a></p>
+      <p>End-to-end credit card fraud detection project using synthetic data. Implemented classification models with imbalanced data handling, feature scaling, and comprehensive performance evaluation.</p>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
+    </div>
+    <div class="card">
+      <h3>House Price Analysis and Prediction</h3>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/House-Price-Analysis-And-Prediction" target="_blank">View Project</a></p>
+      <p>End-to-end analysis and prediction of house prices using Python. Performed EDA, feature engineering, implemented regression models, and built predictive pipelines for real estate valuation.</p>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
+    </div>
+    <div class="card">
+      <h3>NHS Data Analysis</h3>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/NHS-ANALYSIS" target="_blank">View Project</a></p>
+      <p>Automation scripts, patient data cleaning and survey analysis using Python. Developed data pipelines for healthcare data processing and analytical insights.</p>
+      <p><strong>Tech Stack:</strong> Python, Pandas, NumPy, Data Cleaning, Automation</p>
+    </div>
+    <div class="card">
+      <h3>Sales Analysis and Forecasting</h3>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Sales-Analysis-and-Forecasting-Using-ML-Models" target="_blank">View Project</a></p>
+      <p>End-to-end sales analysis and forecasting task using Python. Performed time-series analysis, implemented ML models for demand forecasting, and created actionable business insights.</p>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Time-Series Analysis</p>
     </div>
   </div>
 </section>
 
 <section id="skills">
-  <h2>Skills</h2>
-  <ul class="skills">
-    <li>Python</li><li>SQL</li><li>Power BI</li><li>ML</li><li>CI/CD</li><li>Git</li>
-  </ul>
+  <h2>Technical Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Programming</h3>
+      <ul class="skills">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>LaTeX</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Data Analysis & Tools</h3>
+      <ul class="skills">
+        <li>Pandas</li>
+        <li>NumPy</li>
+        <li>Excel</li>
+        <li>Jupyter</li>
+        <li>Google Colab</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Data Visualisation</h3>
+      <ul class="skills">
+        <li>Power BI</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Plotly</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Machine Learning & Advanced</h3>
+      <ul class="skills">
+        <li>Scikit-learn</li>
+        <li>TensorFlow</li>
+        <li>PyTorch</li>
+        <li>PyCaret</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>DevOps & Deployment</h3>
+      <ul class="skills">
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>Jenkins</li>
+        <li>FastAPI</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Development Tools</h3>
+      <ul class="skills">
+        <li>Git</li>
+        <li>Github</li>
+        <li>VSCode</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications & Languages</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Certifications</h3>
+      <ul>
+        <li><strong>English SELT ISE 1:</strong> Trinity College (Distinction in Writing, Speaking & Listening; Merit in Reading)</li>
+        <li><strong>DBS Certification:</strong> All checks passed</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Languages</h3>
+      <ul>
+        <li>English</li>
+        <li>Hindi</li>
+        <li>Bengali</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: prabhatdhar32@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/Xclipxz07">github.com/Xclipxz07</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/prabhat-dhar-13723618b/">LinkedIn Profile</a></p>
+  <p><strong>Email:</strong> <a href="mailto:prabhatdhar32@gmail.com">prabhatdhar32@gmail.com</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/prabhat-dhar-13723618b/" target="_blank">linkedin.com/in/prabhat-dhar-13723618b</a></p>
+  <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07" target="_blank">github.com/Xclipxz07</a></p>
+  <p><strong>Location:</strong> London, UK</p>
 </section>
 
 
 <footer>
-  <p>© 2025 Prabhat Dhar</p>
+  <p>© 2026 Prabhat Dhar</p>
 </footer>
 
 <!-- CHATBOT -->
@@ -262,10 +668,12 @@
     const messages = document.getElementById('messages');
     messages.innerHTML += `<div class='msg user'>${input.value}</div>`;
 
-    let reply = "I can tell you about my skills, projects, or experience.";
-    if (msg.includes('skill')) reply = "I work with Python, SQL, Power BI, ML, and CI/CD.";
-    if (msg.includes('project')) reply = "I have worked on A&E analysis, CI/CD pipelines, ML forecasting, and fraud detection.";
-    if (msg.includes('experience')) reply = "I have experience as a Data Analyst at Everycare Ltd.";
+    let reply = "I can tell you about my skills, projects, education, or experience. What would you like to know?";
+    if (msg.includes('skill')) reply = "I specialize in Python, SQL, Power BI, Machine Learning (Scikit-learn, TensorFlow, PyTorch), Docker, Kubernetes, FastAPI, and data visualization with Matplotlib, Seaborn, and Plotly.";
+    if (msg.includes('project')) reply = "I've worked on: 1) Health and Fitness AI App with ML recommendations, 2) Rainfall Prediction dissertation using PyCaret AutoML, and 3) Data Analysis for DevOps/MLOps with full CI/CD pipeline. All available on GitHub.";
+    if (msg.includes('experience')) reply = "I work as a Care Assistant at Everycare Ltd since 2023, handling data management, Excel analysis, and GDPR-compliant reporting. Previously at KFC developing operational and teamwork skills.";
+    if (msg.includes('education')) reply = "I have a PG Diploma in Data Science from University of Essex (2022) and a Bachelor's in Physics from University of Calcutta (2021).";
+    if (msg.includes('devops') || msg.includes('mlops')) reply = "I have experience with Docker, Kubernetes, Jenkins, FastAPI, and full CI/CD pipeline automation. I built a production-ready sales forecasting system with these technologies.";
 
     messages.innerHTML += `<div class='msg bot'>${reply}</div>`;
     messages.scrollTop = messages.scrollHeight;
