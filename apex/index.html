@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Innovation | Private AI & Hardware Solutions</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+      background: #0a1428;
+      color: #e0e0e0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(10, 20, 40, 0.85);
+      backdrop-filter: blur(30px);
+      padding: 16px 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    nav .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00d9ff, #0099ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .motto {
+      font-size: 11px;
+      color: #00d9ff;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-left: 12px;
+      padding: 4px 10px;
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #b0b0b0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      color: #00d9ff;
+      text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0a1428 0%, #1a2f4f 100%);
+      color: #e0e0e0;
+      padding: 160px 20px;
+      text-align: center;
+      border-bottom: 2px solid rgba(0, 217, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: floatGlow 6s ease-in-out infinite;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 153, 255, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: floatGlow 8s ease-in-out infinite reverse;
+    }
+
+    @keyframes floatGlow {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(30px);
+      }
+    }
+
+    header h1 {
+      font-size: 64px;
+      margin: 0 0 20px 0;
+      font-weight: 800;
+      letter-spacing: -1px;
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(135deg, #00d9ff, #0099ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      font-size: 18px;
+      margin: 12px 0;
+      color: #b0b0b0;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 40px;
+      background: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+      color: #0a1428;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+      position: relative;
+      z-index: 1;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.6);
+      text-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 120px 20px;
+      max-width: 1280px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 70px;
+      text-align: center;
+      background: linear-gradient(135deg, #00d9ff, #0099ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.7px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, rgba(26, 47, 79, 0.6) 0%, rgba(10, 20, 40, 0.4) 100%);
+      padding: 45px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .card:hover {
+      background: linear-gradient(135deg, rgba(26, 47, 79, 0.8) 0%, rgba(10, 20, 40, 0.6) 100%);
+      transform: translateY(-12px);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+      border-color: rgba(0, 217, 255, 0.4);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card h3 {
+      color: #00d9ff;
+      margin: 0 0 14px 0;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+    }
+
+    .card p {
+      color: #b0b0b0;
+      margin: 14px 0;
+      font-size: 15px;
+      line-height: 1.7;
+      letter-spacing: 0.2px;
+    }
+
+    /* PILLARS */
+    #pillars {
+      background: linear-gradient(to bottom, rgba(0, 217, 255, 0.03) 0%, rgba(0, 153, 255, 0.02) 100%);
+    }
+
+    .pillar-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    /* SOFTWARE SECTION */
+    #software {
+      background: linear-gradient(to bottom, rgba(0, 153, 255, 0.02) 0%, rgba(10, 20, 40, 0) 100%);
+    }
+
+    .project-card {
+      background: linear-gradient(135deg, rgba(26, 47, 79, 0.6) 0%, rgba(10, 20, 40, 0.4) 100%);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .project-card:hover {
+      border-color: rgba(0, 217, 255, 0.5);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+      transform: translateY(-8px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #1a2f4f 0%, #0a1428 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: #00d9ff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(0, 217, 255, 0.15), transparent);
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content h3 {
+      color: #00d9ff;
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .project-content p {
+      color: #b0b0b0;
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+    }
+
+    .tag {
+      background: rgba(0, 217, 255, 0.15);
+      color: #00d9ff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .project-link {
+      flex: 1;
+      padding: 10px 16px;
+      background: rgba(0, 217, 255, 0.1);
+      color: #00d9ff;
+      text-decoration: none;
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      border-radius: 6px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .project-link:hover {
+      background: rgba(0, 217, 255, 0.2);
+      border-color: rgba(0, 217, 255, 0.6);
+    }
+
+    /* HARDWARE TIMELINE */
+    #hardware {
+      background: linear-gradient(to bottom, rgba(10, 20, 40, 0) 0%, rgba(0, 217, 255, 0.03) 100%);
+    }
+
+    .timeline {
+      position: relative;
+      padding: 40px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.4), rgba(0, 217, 255, 0.2));
+    }
+
+    .timeline-item {
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-left: 0;
+      margin-right: 52%;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 52%;
+      margin-right: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background: #0a1428;
+      border: 3px solid #00d9ff;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 0 0 4px rgba(0, 217, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-dot {
+      width: 28px;
+      height: 28px;
+      transform: translateX(-50%) translateX(-4px);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+    }
+
+    .timeline-content {
+      background: linear-gradient(135deg, rgba(26, 47, 79, 0.6) 0%, rgba(10, 20, 40, 0.4) 100%);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .timeline-content:hover {
+      background: linear-gradient(135deg, rgba(26, 47, 79, 0.8) 0%, rgba(10, 20, 40, 0.6) 100%);
+      border-color: rgba(0, 217, 255, 0.5);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+    }
+
+    .timeline-content h3 {
+      color: #00d9ff;
+      margin: 0 0 8px 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .timeline-date {
+      color: #00d9ff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-status {
+      display: inline-block;
+      padding: 4px 10px;
+      background: rgba(0, 217, 255, 0.15);
+      color: #00d9ff;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .timeline-content p {
+      color: #b0b0b0;
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .timeline-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .timeline-details.active {
+      max-height: 300px;
+    }
+
+    .timeline-specs {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+
+    .timeline-specs li {
+      color: #b0b0b0;
+      font-size: 13px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+    }
+
+    /* CTA SECTION */
+    #cta {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(0, 153, 255, 0.05) 100%);
+      text-align: center;
+      border-top: 2px solid rgba(0, 217, 255, 0.2);
+      border-bottom: 2px solid rgba(0, 217, 255, 0.2);
+    }
+
+    #cta h2 {
+      margin-bottom: 20px;
+    }
+
+    #cta p {
+      font-size: 18px;
+      color: #b0b0b0;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(to bottom, rgba(10, 20, 40, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%);
+      color: #666666;
+      text-align: center;
+      padding: 50px 20px;
+      border-top: 2px solid rgba(0, 217, 255, 0.15);
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #00d9ff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #00ffff;
+      text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 44px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-dot {
+        left: 20px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 60px;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 100px 20px;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      nav {
+        padding: 12px 0;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* DHAR TECH VISUALIZATION */
+    .dhar-section {
+      background: radial-gradient(circle at center, #1a2f4f 0%, #0a1428 100%);
+      padding: 150px 20px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(0, 217, 255, 0.3);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.3);
+    }
+
+    .dhar-section::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image:
+        radial-gradient(circle, rgba(0, 217, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(0, 217, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 217, 255, 0.02) 1px, transparent 1px);
+      background-size: 50px 50px, 100px 100px, 100px 100px;
+      transform: rotate(15deg);
+      pointer-events: none;
+    }
+
+    .dhar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .agent-display {
+      background: rgba(10, 20, 40, 0.6);
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      padding: 40px;
+      border-radius: 2px;
+      position: relative;
+      backdrop-filter: blur(20px);
+      transition: all 0.5s ease;
+      clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+    }
+
+    .agent-display:hover {
+      border-color: #00d9ff;
+      box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
+      transform: scale(1.02);
+    }
+
+    .agent-display::after {
+      content: 'DHAR_INTEL_SYSTEM_v4.0';
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-family: monospace;
+      font-size: 10px;
+      color: rgba(0, 217, 255, 0.5);
+      letter-spacing: 2px;
+    }
+
+    .hud-header {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #00d9ff;
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+    }
+
+    .hud-line {
+      height: 2px;
+      background: linear-gradient(90deg, #00d9ff, transparent);
+      margin-bottom: 20px;
+      width: 80%;
+    }
+
+    .dhar-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+    }
+
+    .dhar-feature-list li {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #b0b0b0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dhar-feature-list li::before {
+      content: '>>';
+      color: #00d9ff;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+    .nexus-orb {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.8) 0%, transparent 70%);
+      margin: 0 auto 30px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 50px rgba(0, 217, 255, 0.4);
+      animation: pulseOrb 4s infinite alternate;
+    }
+
+    .nexus-orb::before {
+      content: '';
+      position: absolute;
+      width: 140%;
+      height: 140%;
+      border: 1px dashed rgba(0, 217, 255, 0.3);
+      border-radius: 50%;
+      animation: rotateRing 10s linear infinite;
+    }
+
+    @keyframes pulseOrb {
+      from {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      to {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes rotateRing {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .dhar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container">
+      <div style="display: flex; align-items: center;">
+        <a href="index.html" class="logo">APEX</a>
+        <span class="motto">#BuildInPublic</span>
+      </div>
+      <ul>
+        <li><a href="#fine-tuning">Fine-Tuning</a></li>
+        <li><a href="#nexus">Nexus</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#hardware">Machines</a></li>
+        <li><a href="../index.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Apex Innovation</h1>
+    <p>The Intelligence of Tomorrow, Powered Locally Today.</p>
+    <p>Engineering a new era of private, offline AI solutions for the modern world.</p>
+    <a class="btn" href="#forge">Explore the Forge</a>
+  </header>
+
+  <section id="pillars">
+    <h2>Core Pillars</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="pillar-icon">🔒</span>
+        <h3>Private AI</h3>
+        <p>100% data privacy with local LLM deployments using Ollama. Your data never leaves your machine.
+          Enterprise-grade security for sensitive applications.</p>
+      </div>
+      <div class="card">
+        <span class="pillar-icon">🏗️</span>
+        <h3>Multi-Sector Innovation</h3>
+        <p>Tailored AI solutions for Medical, Legal, and Engineering sectors. Intelligent systems that adapt to
+          industry-specific challenges and compliance requirements.</p>
+      </div>
+      <div class="card">
+        <span class="pillar-icon">⚙️</span>
+        <h3>Hardware Evolution</h3>
+        <p>Roadmap into AI-driven machines and tech. Merging computation with physical systems to create the next
+          generation of intelligent devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fine-tuning">
+    <h2>Custom AI Fine-Tuning</h2>
+    <div class="card" style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <span class="pillar-icon">🧠</span>
+      <h3>Tailored Local Intelligence</h3>
+      <p>Beyond general-purpose models, we specialize in <strong>fine-tuning local AI models</strong> for highly
+        specific personal and professional needs. Whether it's a unique coding style, specialized medical terminology,
+        or custom brand voice, we optimize models to run efficiently on your hardware.</p>
+      <p>Our fine-tuned models can be integrated directly into your custom applications, providing a level of precision
+        and privacy that off-the-shelf solutions cannot match.</p>
+
+      <div
+        style="margin-top: 30px; padding: 20px; background: rgba(0, 217, 255, 0.05); border-radius: 8px; border: 1px dashed rgba(0, 217, 255, 0.3);">
+        <p style="color: #00d9ff; font-weight: 700; margin-bottom: 15px;">Want to use our fine-tuned AI for your
+          specific app?</p>
+        <a href="mailto:prabhatdhar32@gmail.com" class="btn" style="margin-top: 0;">Contact Us for Custom Models</a>
+        <p style="margin-top: 15px; font-size: 14px; color: #00d9ff;">Email: prabhatdhar32@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="nexus" class="dhar-section">
+    <div style="text-align: center; margin-bottom: 80px;">
+      <h2 style="margin-bottom: 10px;">The Intelligence Nexus</h2>
+      <p style="color: #00d9ff; font-family: monospace; letter-spacing: 2px;">NEXT-GENERATION COGNITIVE SYSTEMS</p>
+    </div>
+
+    <div class="dhar-grid">
+      <!-- C.L.A.I.R.E -->
+      <div class="agent-display">
+        <div class="nexus-orb">
+          <span style="font-size: 40px;">💠</span>
+        </div>
+        <h3 class="hud-header">C.L.A.I.R.E</h3>
+        <div class="hud-line"></div>
+        <p style="color: #e0e0e0; font-size: 16px; margin-bottom: 20px;">Your Daily Q&A Powerhouse. Not just a chatbot,
+          but a neural companion designed for the speed of thought.</p>
+        <ul class="dhar-feature-list">
+          <li>Real-time complex question processing</li>
+          <li>Context-aware daily task management</li>
+          <li>Zero-latency information retrieval</li>
+          <li>Full integration with local workflows</li>
+        </ul>
+        <a href="https://github.com/Xclipxz07/C.L.A.I.R.E" target="_blank" class="btn"
+          style="width: 100%; text-align: center; background: transparent; border: 1px solid #00d9ff; color: #00d9ff; box-shadow: none;">Initialize
+          CLAIRE</a>
+      </div>
+
+      <!-- COMPUTER AGENT -->
+      <div class="agent-display">
+        <div class="nexus-orb" style="background: radial-gradient(circle, rgba(0, 153, 255, 0.8) 0%, transparent 70%);">
+          <span style="font-size: 40px;">⚡</span>
+        </div>
+        <h3 class="hud-header">Computer Agent</h3>
+        <div class="hud-line"></div>
+        <p style="color: #e0e0e0; font-size: 16px; margin-bottom: 20px;">The Architect of Your OS. Like Siri, but
+          better.
+          Integrated with Ollama for 100% private system mastery.</p>
+        <ul class="dhar-feature-list">
+          <li>Native Windows system automation</li>
+          <li>Ollama-powered private intelligence</li>
+          <li>Voice-to-Task execution engine</li>
+          <li>Deep system-level file & app control</li>
+        </ul>
+        <a href="https://github.com/Xclipxz07/Computer-Agent-Windows-" target="_blank" class="btn"
+          style="width: 100%; text-align: center; background: transparent; border: 1px solid #00d9ff; color: #00d9ff; box-shadow: none;">Access
+          System Core</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="software">
+    <h2>Software Showcase</h2>
+    <div class="grid">
+
+
+
+
+      <div class="project-card">
+        <div class="project-image">🖥️</div>
+        <div class="project-content">
+          <h3>Computer Agent Windows</h3>
+          <p>An intelligent computer agent (Siri/Cortana replacement) for Windows that automates system tasks and
+            streamlines workflows using local AI, ensuring high performance and data privacy.</p>
+          <div class="project-tags">
+            <span class="tag">Automation</span>
+            <span class="tag">Windows</span>
+            <span class="tag">AI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xclipxz07/Computer-Agent-Windows-" target="_blank"
+              class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">🤖</div>
+        <div class="project-content">
+          <h3>C.L.A.I.R.E</h3>
+          <p>A sophisticated Windows based AI personal chatbot(integrated with local LLMs) designed for seamless task
+            management and intelligent information
+            retrieval, focused on privacy and efficiency.</p>
+          <div class="project-tags">
+            <span class="tag">AI</span>
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xclipxz07/C.L.A.I.R.E" target="_blank" class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">📊</div>
+        <div class="project-content">
+          <h3>Health & Fitness AI App</h3>
+          <p>AI-powered personalized recommendations, fitness tracking, and wellness insights. Integrated ML algorithms
+            for comprehensive health analysis.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">ML</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xclipxz07/Health-and-Fitness-AI-App" target="_blank"
+              class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">🏥</div>
+        <div class="project-content">
+          <h3>Ambient Scribe</h3>
+          <p>Privacy-first, locally-hosted medical transcription application. Captures consultations, transcribes using
+            local Whisper, and generates SOAP notes via local Ollama models.</p>
+          <div class="project-tags">
+            <span class="tag">Medical AI</span>
+            <span class="tag">Whisper</span>
+            <span class="tag">Ollama</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xclipxz07/Ambient-Scribe" target="_blank" class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">🌧️</div>
+        <div class="project-content">
+          <h3>Rainfall Prediction ML</h3>
+          <p>Advanced forecasting based on Australian weather patterns. Implements multiple algorithms with
+            comprehensive EDA and evaluation metrics.</p>
+          <div class="project-tags">
+            <span class="tag">ML</span>
+            <span class="tag">Python</span>
+            <span class="tag">PyCaret</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xclipxz07/Rainfall-prediction" target="_blank" class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="hardware">
+    <h2>Hardware Roadmap</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content" onclick="this.nextElementSibling.classList.toggle('active')">
+          <div class="timeline-date">Phase 1 — Q1 2025</div>
+          <h3>Research & Development</h3>
+          <p>Exploring AI-driven systems, feasibility studies, and concept validation.</p>
+          <span class="timeline-status">In Progress</span>
+          <div class="timeline-details">
+            <ul class="timeline-specs">
+              <li>✓ Ollama integration study</li>
+              <li>✓ Hardware sensor APIs</li>
+              <li>✓ Edge computing architecture</li>
+              <li>→ Prototype roadmap</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content" onclick="this.nextElementSibling.classList.toggle('active')">
+          <div class="timeline-date">Phase 2 — Q2-Q3 2025</div>
+          <h3>Prototype Development</h3>
+          <p>Building initial prototypes, hardware-software integration, and beta testing.</p>
+          <span class="timeline-status">Planning</span>
+          <div class="timeline-details">
+            <ul class="timeline-specs">
+              <li>→ PCB design</li>
+              <li>→ Sensor integration</li>
+              <li>→ Firmware development</li>
+              <li>→ User testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content" onclick="this.nextElementSibling.classList.toggle('active')">
+          <div class="timeline-date">Phase 3 — Q4 2025</div>
+          <h3>Production & Launch</h3>
+          <p>Manufacturing, quality assurance, and commercial release of first products.</p>
+          <span class="timeline-status">Planned</span>
+          <div class="timeline-details">
+            <ul class="timeline-specs">
+              <li>→ Manufacturing setup</li>
+              <li>→ Quality testing</li>
+              <li>→ Market release</li>
+              <li>→ Support infrastructure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="forge">
+    <h2>Ready to Build the Future?</h2>
+    <p>Join the #BuildInPublic movement. Explore cutting-edge AI and hardware innovation designed for privacy, security,
+      and real-world impact.</p>
+    <a href="../index.html" class="btn">Explore the Forge →</a>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/Xclipxz07" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/prabhat-dhar-13723618b/" target="_blank">LinkedIn</a>
+      <a href="mailto:prabhatdhar32@gmail.com">Email</a>
+      <a href="../index.html">Portfolio</a>
+    </div>
+    <p>© 2026 Apex Innovation. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
