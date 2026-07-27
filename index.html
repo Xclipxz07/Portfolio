@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabhat Dhar | Portfolio</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
@@ -26,6 +30,7 @@
       border-bottom: 1px solid rgba(0, 113, 227, 0.1);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -34,6 +39,7 @@
       margin: 0;
       padding: 0;
     }
+
     nav a {
       color: #1d1d1f;
       text-decoration: none;
@@ -42,6 +48,7 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       letter-spacing: 0.5px;
     }
+
     nav a:hover {
       color: #0071e3;
     }
@@ -56,6 +63,7 @@
       position: relative;
       overflow: hidden;
     }
+
     header::before {
       content: '';
       position: absolute;
@@ -66,6 +74,7 @@
       background: radial-gradient(circle, rgba(0, 113, 227, 0.12) 0%, transparent 70%);
       border-radius: 50%;
     }
+
     header h1 {
       font-size: 64px;
       margin: 0 0 16px 0;
@@ -78,6 +87,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     header p {
       font-size: 18px;
       margin: 8px 0;
@@ -85,6 +95,7 @@
       font-weight: 400;
       letter-spacing: 0.3px;
     }
+
     .btn {
       display: inline-block;
       margin-top: 35px;
@@ -100,6 +111,7 @@
       position: relative;
       z-index: 1;
     }
+
     .btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 15px 40px rgba(0, 113, 227, 0.35);
@@ -110,31 +122,29 @@
       max-width: 1280px;
       margin: auto;
     }
+
     #education {
       background: linear-gradient(to right, rgba(0, 200, 100, 0.05), rgba(0, 150, 200, 0.05));
     }
+
     #experience {
       background: linear-gradient(to right, rgba(255, 150, 0, 0.05), rgba(255, 100, 50, 0.05));
     }
+
     #projects {
       background: linear-gradient(to right, rgba(0, 100, 200, 0.05), rgba(100, 50, 200, 0.05));
     }
-    #ai-fine-tuning {
-      background: linear-gradient(to right, rgba(150, 100, 255, 0.05), rgba(100, 150, 255, 0.05));
-    }
-    #ai-fine-tuning .card {
-      border-left: 5px solid #9966ff;
-    }
-    #ai-fine-tuning .card:hover {
-      border-left-color: #b085ff;
-      box-shadow: 0 12px 40px rgba(150, 100, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
-    }
+
+
+
     #skills {
       background: linear-gradient(to right, rgba(200, 50, 100, 0.05), rgba(255, 100, 0, 0.05));
     }
+
     #certifications {
       background: linear-gradient(to right, rgba(100, 200, 100, 0.05), rgba(50, 150, 100, 0.05));
     }
+
     h2 {
       font-size: 48px;
       font-weight: 800;
@@ -151,6 +161,7 @@
       gap: 32px;
       margin-bottom: 40px;
     }
+
     .card {
       background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
       padding: 45px;
@@ -161,6 +172,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .card::before {
       content: '';
       position: absolute;
@@ -172,36 +184,45 @@
       opacity: 0;
       transition: opacity 0.5s ease;
     }
+
     .card:hover {
       background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
       transform: translateY(-12px);
       box-shadow: 0 12px 40px rgba(0, 113, 227, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
       border-color: rgba(0, 113, 227, 0.25);
     }
+
     .card:hover::before {
       opacity: 1;
     }
+
     #education .card {
       border-left: 5px solid #00c864;
     }
+
     #education .card:hover {
       border-left-color: #34c759;
       box-shadow: 0 12px 40px rgba(0, 200, 100, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
     }
+
     #experience .card {
       border-left: 5px solid #ff9500;
     }
+
     #experience .card:hover {
       border-left-color: #ff9500;
       box-shadow: 0 12px 40px rgba(255, 150, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
     }
+
     #projects .card {
       border-left: 5px solid #0071e3;
     }
+
     #projects .card:hover {
       border-left-color: #0077ed;
       box-shadow: 0 12px 40px rgba(0, 113, 227, 0.2), 0 4px 12px rgba(0, 0, 0, 0.04);
     }
+
     .card h3 {
       color: #1d1d1f;
       margin: 0 0 14px 0;
@@ -210,6 +231,7 @@
       line-height: 1.3;
       letter-spacing: -0.3px;
     }
+
     .card p {
       color: #666666;
       margin: 14px 0;
@@ -217,10 +239,12 @@
       line-height: 1.7;
       letter-spacing: 0.2px;
     }
+
     .card strong {
       color: #0071e3;
       font-weight: 700;
     }
+
     .card a {
       color: #0071e3;
       text-decoration: none;
@@ -231,20 +255,25 @@
       align-items: center;
       gap: 6px;
     }
+
     .card a::after {
       content: '→';
       transition: transform 0.3s ease;
     }
+
     .card a:hover {
       color: #0077ed;
     }
+
     .card a:hover::after {
       transform: translateX(4px);
     }
+
     .card ul {
       margin: 20px 0;
       padding-left: 0;
     }
+
     .card li {
       margin: 12px 0;
       color: #666666;
@@ -253,6 +282,7 @@
       padding-left: 20px;
       position: relative;
     }
+
     .card li::before {
       content: '◆';
       position: absolute;
@@ -269,6 +299,7 @@
       margin: 0;
       gap: 20px;
     }
+
     ul.skills li {
       background: linear-gradient(135deg, #f0f7ff 0%, #f5f5ff 100%);
       color: #0071e3;
@@ -285,6 +316,7 @@
       word-wrap: break-word;
       overflow-wrap: break-word;
     }
+
     ul.skills li:hover {
       background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
       color: #ffffff;
@@ -318,16 +350,19 @@
       animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       border: 2px solid rgba(0, 113, 227, 0.15);
     }
+
     @keyframes slideUp {
       from {
         transform: translateY(30px);
         opacity: 0;
       }
+
       to {
         transform: translateY(0);
         opacity: 1;
       }
     }
+
     .chatbot-header {
       background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
       color: #ffffff;
@@ -337,6 +372,7 @@
       font-size: 15px;
       letter-spacing: 0.3px;
     }
+
     .chatbot-messages {
       padding: 22px;
       height: 340px;
@@ -344,6 +380,7 @@
       font-size: 14px;
       background: #fafbff;
     }
+
     .msg.bot {
       color: #1d1d1f;
       margin-bottom: 16px;
@@ -354,6 +391,7 @@
       line-height: 1.6;
       font-size: 14px;
     }
+
     .msg.user {
       color: #ffffff;
       margin-bottom: 16px;
@@ -365,11 +403,13 @@
       line-height: 1.6;
       font-size: 14px;
     }
+
     .chatbot-input {
       display: flex;
       border-top: 2px solid rgba(0, 113, 227, 0.1);
       background: #ffffff;
     }
+
     .chatbot-input input {
       flex: 1;
       padding: 14px 16px;
@@ -379,9 +419,11 @@
       background: transparent;
       font-family: inherit;
     }
+
     .chatbot-input input::placeholder {
       color: #a1a1a6;
     }
+
     .chatbot-input button {
       background: transparent;
       border: none;
@@ -392,9 +434,11 @@
       transition: all 0.3s ease;
       font-size: 14px;
     }
+
     .chatbot-input button:hover {
       opacity: 0.7;
     }
+
     .chat-toggle {
       position: fixed;
       bottom: 20px;
@@ -411,347 +455,370 @@
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       font-weight: 600;
     }
+
     .chat-toggle:hover {
       box-shadow: 0 16px 48px rgba(0, 113, 227, 0.5);
       transform: scale(1.08);
     }
 
     @media (max-width: 600px) {
-      ul.skills { columns: 1; }
-      nav ul { flex-direction: column; gap: 12px; }
-      header h1 { font-size: 44px; }
-      .grid { grid-template-columns: 1fr; }
-      .chatbot { width: 92vw; }
-      section { padding: 70px 20px; }
-      h2 { font-size: 36px; }
+      ul.skills {
+        columns: 1;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      header h1 {
+        font-size: 44px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .chatbot {
+        width: 92vw;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<nav>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#ai-fine-tuning">AI Fine-Tuning</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="apex/index.html" style="color: #0071e3; font-weight: 700; display: flex; align-items: center; gap: 8px;">
-      <svg width="18" height="18" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-        <circle cx="20" cy="20" r="18" fill="none" stroke="#0071e3" stroke-width="1.5" opacity="0.4"/>
-        <line x1="10" y1="28" x2="20" y2="8" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="30" y1="28" x2="20" y2="8" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="14" y1="20" x2="26" y2="20" stroke="#00a8ff" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="12" cy="30" r="1.5" fill="#00a8ff"/>
-        <circle cx="20" cy="32" r="1.5" fill="#0071e3"/>
-        <circle cx="28" cy="30" r="1.5" fill="#00a8ff"/>
-        <line x1="12" y1="30" x2="20" y2="32" stroke="#00a8ff" stroke-width="0.8" opacity="0.6"/>
-        <line x1="20" y1="32" x2="28" y2="30" stroke="#00a8ff" stroke-width="0.8" opacity="0.6"/>
-      </svg>
-      Apex
-    </a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="apex/index.html"
+          style="color: #0071e3; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="#0071e3" stroke-width="1.5" opacity="0.4" />
+            <line x1="10" y1="28" x2="20" y2="8" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="30" y1="28" x2="20" y2="8" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="14" y1="20" x2="26" y2="20" stroke="#00a8ff" stroke-width="2" stroke-linecap="round" />
+            <circle cx="12" cy="30" r="1.5" fill="#00a8ff" />
+            <circle cx="20" cy="32" r="1.5" fill="#0071e3" />
+            <circle cx="28" cy="30" r="1.5" fill="#00a8ff" />
+            <line x1="12" y1="30" x2="20" y2="32" stroke="#00a8ff" stroke-width="0.8" opacity="0.6" />
+            <line x1="20" y1="32" x2="28" y2="30" stroke="#00a8ff" stroke-width="0.8" opacity="0.6" />
+          </svg>
+          Apex
+        </a></li>
+    </ul>
+  </nav>
 
-<header>
-  <h1>Prabhat Dhar</h1>
-  <p>Data Analyst | Python | SQL | Power BI | Machine Learning | MLOps | DevOps</p>
-  <p>London, UK • prabhatdhar32@gmail.com</p>
-  <a class="btn" href="Prabhatcv.pdf" download>Download CV</a>
-</header>
+  <header>
+    <h1>Prabhat Dhar</h1>
+    <p>Data Analyst | Python | SQL | Power BI | Machine Learning | MLOps | DevOps</p>
+    <p>London, UK • prabhatdhar32@gmail.com</p>
+    <a class="btn" href="Prabhatcv.pdf" download>Download CV</a>
+  </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Data Analyst with a strong foundation in Python, SQL, and data visualisation, supported by academic projects and practical experience working with real datasets. Skilled in data cleaning, exploratory analysis, and building dashboards to generate insights. Currently working in the UK and seeking an entry-level data analyst opportunity to apply analytical and problem-solving skills in a professional environment.</p>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Data Analyst with a strong foundation in Python, SQL, and data visualisation, supported by academic projects and
+      practical experience working with real datasets. Skilled in data cleaning, exploratory analysis, and building
+      dashboards to generate insights. Currently working in the UK and seeking an entry-level data analyst opportunity
+      to apply analytical and problem-solving skills in a professional environment.</p>
+  </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>PG Diploma in Data Science and Its Application</h3>
-      <p><strong>University of Essex, Colchester, UK</strong></p>
-      <p>November 2022 • 165 Credits</p>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>PG Diploma in Data Science and Its Application</h3>
+        <p><strong>University of Essex, Colchester, UK</strong></p>
+        <p>November 2022 • 165 Credits</p>
+      </div>
+      <div class="card">
+        <h3>Bachelor's in Physics</h3>
+        <p><strong>University of Calcutta, West Bengal, India</strong></p>
+        <p>August 2021 • 7.240 CGPA</p>
+      </div>
+      <div class="card">
+        <h3>I.S.C (12th)</h3>
+        <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
+        <p>April 2017 • 85%</p>
+      </div>
+      <div class="card">
+        <h3>I.C.S.E (10th)</h3>
+        <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
+        <p>April 2015 • 93.8%</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Bachelor's in Physics</h3>
-      <p><strong>University of Calcutta, West Bengal, India</strong></p>
-      <p>August 2021 • 7.240 CGPA</p>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Care Assistant — Everycare Ltd</h3>
+        <p><strong>April 2023 – Present</strong></p>
+        <ul>
+          <li>Maintained and updated care records using digital systems and Excel</li>
+          <li>Created simple reports using Excel (pivot tables, basic analysis)</li>
+          <li>Identified patterns in attendance and incident logs to support staff planning</li>
+          <li>Ensured accurate data entry and data integrity in line with GDPR</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Team Member — KFC (Demipower Ltd, Wood Green)</h3>
+        <p><strong>January 2021 – March 2023</strong></p>
+        <ul>
+          <li>Delivered fast, friendly service in a high-pressure environment</li>
+          <li>Upheld hygiene, safety and quality standards</li>
+          <li>Handled transactions and managed orders during peak periods</li>
+          <li>Developed reliability, punctuality, teamwork and communication skills</li>
+        </ul>
+      </div>
     </div>
-    <div class="card">
-      <h3>I.S.C (12th)</h3>
-      <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
-      <p>April 2017 • 85%</p>
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Arsis - Advanced Computer Agent</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Project-ARSIS"
+            target="_blank">View Project</a></p>
+        <p>Like Siri, but better. An advanced cognitive computer agent capable of complete file automation, including seamless creation, deletion, and management of files and folders directly on your desktop through natural language.</p>
+        <p><strong>Tech Stack:</strong> Python, Ollama, System Automation, AI</p>
+      </div>
+      <div class="card">
+        <h3>Health and Fitness AI App</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Health-and-Fitness-AI-App"
+            target="_blank">View Project</a></p>
+        <p>AI-powered health and fitness application providing personalized recommendations, fitness tracking, and
+          wellness insights. Integrated ML algorithms to analyze workout history, nutrition, sleep patterns, and goals.
+        </p>
+        <p><strong>Tech Stack:</strong> Python, Scikit-learn, TensorFlow, PyTorch, Streamlit, Matplotlib, Seaborn,
+          Plotly</p>
+      </div>
+      <div class="card">
+        <h3>Rainfall Prediction Using ML Models</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Rainfall-prediction" target="_blank">View
+            Project</a></p>
+        <p>Dissertation project forecasting rainfall based on historical Australian weather patterns. Implemented
+          multiple algorithms (Logistic Regression, Random Forest, Gradient Boosting, Neural Networks) with
+          comprehensive EDA and evaluation.</p>
+        <p><strong>Tech Stack:</strong> Python, PyCaret, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly</p>
+      </div>
+      <div class="card">
+        <h3>Data Analysis for DevOps, MLOps & GenAI</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/DATA-ANALYSIS-FOR-DEVOPS-MLOPS-GENAI"
+            target="_blank">View Project</a></p>
+        <p>Production-ready sales forecasting system combining ML, generative AI, and DevOps practices. Built end-to-end
+          ML pipeline, REST API with FastAPI, containerized with Docker, deployed with Kubernetes and Jenkins CI/CD.</p>
+        <p><strong>Tech Stack:</strong> Python, SQLite, FastAPI, Docker, Kubernetes, Jenkins, OpenAI GPT-4, Power BI</p>
+      </div>
+      <div class="card">
+        <h3>Banking Churn Prediction</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Banking-Churn-Prediction" target="_blank">View
+            Project</a></p>
+        <p>Full end-to-end banking customer churn analysis using synthetic data. Comprehensive exploratory data
+          analysis, feature engineering, multiple ML models, and evaluation metrics (ROC-AUC, confusion matrices,
+          classification reports).</p>
+        <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
+      </div>
+      <div class="card">
+        <h3>Credit Card Fraud Detection</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Credit-Card-Analysis" target="_blank">View
+            Project</a></p>
+        <p>End-to-end credit card fraud detection project using synthetic data. Implemented classification models with
+          imbalanced data handling, feature scaling, and comprehensive performance evaluation.</p>
+        <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
+      </div>
+      <div class="card">
+        <h3>House Price Analysis and Prediction</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/House-Price-Analysis-And-Prediction"
+            target="_blank">View Project</a></p>
+        <p>End-to-end analysis and prediction of house prices using Python. Performed EDA, feature engineering,
+          implemented regression models, and built predictive pipelines for real estate valuation.</p>
+        <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
+      </div>
+      <div class="card">
+        <h3>NHS Data Analysis</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/NHS-ANALYSIS" target="_blank">View Project</a>
+        </p>
+        <p>Automation scripts, patient data cleaning and survey analysis using Python. Developed data pipelines for
+          healthcare data processing and analytical insights.</p>
+        <p><strong>Tech Stack:</strong> Python, Pandas, NumPy, Data Cleaning, Automation</p>
+      </div>
+      <div class="card">
+        <h3>Sales Analysis and Forecasting</h3>
+        <p><strong>GitHub:</strong> <a
+            href="https://github.com/Xclipxz07/Sales-Analysis-and-Forecasting-Using-ML-Models" target="_blank">View
+            Project</a></p>
+        <p>End-to-end sales analysis and forecasting task using Python. Performed time-series analysis, implemented ML
+          models for demand forecasting, and created actionable business insights.</p>
+        <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Time-Series Analysis</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>I.C.S.E (10th)</h3>
-      <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
-      <p>April 2015 • 93.8%</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <ul class="skills">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>LaTeX</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data Analysis & Tools</h3>
+        <ul class="skills">
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>Excel</li>
+          <li>Jupyter</li>
+          <li>Google Colab</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data Visualisation</h3>
+        <ul class="skills">
+          <li>Power BI</li>
+          <li>Matplotlib</li>
+          <li>Seaborn</li>
+          <li>Plotly</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Machine Learning & Advanced</h3>
+        <ul class="skills">
+          <li>Scikit-learn</li>
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+          <li>PyCaret</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>DevOps & Deployment</h3>
+        <ul class="skills">
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>Jenkins</li>
+          <li>FastAPI</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Development Tools</h3>
+        <ul class="skills">
+          <li>Git</li>
+          <li>Github</li>
+          <li>VSCode</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications & Languages</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Certifications</h3>
+        <ul>
+          <li><strong>English SELT ISE 1:</strong> Trinity College (Distinction in Writing, Speaking & Listening; Merit
+            in Reading)</li>
+          <li><strong>DBS Certification:</strong> All checks passed</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Languages</h3>
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Bengali</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:prabhatdhar32@gmail.com">prabhatdhar32@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/prabhat-dhar-13723618b/"
+        target="_blank">linkedin.com/in/prabhat-dhar-13723618b</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07" target="_blank">github.com/Xclipxz07</a></p>
+    <p><strong>Location:</strong> London, UK</p>
+  </section>
+
+
+  <footer>
+    <p>© 2026 Prabhat Dhar</p>
+  </footer>
+
+  <!-- CHATBOT -->
+  <button class="chat-toggle" onclick="toggleChat()">💬</button>
+  <div class="chatbot" id="chatbot">
+    <div class="chatbot-header">Ask Me</div>
+    <div class="chatbot-messages" id="messages">
+      <div class="msg bot">Hi! Ask me about my skills, projects, or experience.</div>
+    </div>
+    <div class="chatbot-input">
+      <input id="userInput" placeholder="Type a question..." />
+      <button onclick="sendMessage()">Send</button>
     </div>
   </div>
-</section>
 
-<section id="experience">
-  <h2>Work Experience</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Care Assistant — Everycare Ltd</h3>
-      <p><strong>April 2023 – Present</strong></p>
-      <ul>
-        <li>Maintained and updated care records using digital systems and Excel</li>
-        <li>Created simple reports using Excel (pivot tables, basic analysis)</li>
-        <li>Identified patterns in attendance and incident logs to support staff planning</li>
-        <li>Ensured accurate data entry and data integrity in line with GDPR</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Team Member — KFC (Demipower Ltd, Wood Green)</h3>
-      <p><strong>January 2021 – March 2023</strong></p>
-      <ul>
-        <li>Delivered fast, friendly service in a high-pressure environment</li>
-        <li>Upheld hygiene, safety and quality standards</li>
-        <li>Handled transactions and managed orders during peak periods</li>
-        <li>Developed reliability, punctuality, teamwork and communication skills</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Key Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Health and Fitness AI App</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Health-and-Fitness-AI-App" target="_blank">View Project</a></p>
-      <p>AI-powered health and fitness application providing personalized recommendations, fitness tracking, and wellness insights. Integrated ML algorithms to analyze workout history, nutrition, sleep patterns, and goals.</p>
-      <p><strong>Tech Stack:</strong> Python, Scikit-learn, TensorFlow, PyTorch, Streamlit, Matplotlib, Seaborn, Plotly</p>
-    </div>
-    <div class="card">
-      <h3>Rainfall Prediction Using ML Models</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Rainfall-prediction" target="_blank">View Project</a></p>
-      <p>Dissertation project forecasting rainfall based on historical Australian weather patterns. Implemented multiple algorithms (Logistic Regression, Random Forest, Gradient Boosting, Neural Networks) with comprehensive EDA and evaluation.</p>
-      <p><strong>Tech Stack:</strong> Python, PyCaret, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly</p>
-    </div>
-    <div class="card">
-      <h3>Data Analysis for DevOps, MLOps & GenAI</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/DATA-ANALYSIS-FOR-DEVOPS-MLOPS-GENAI" target="_blank">View Project</a></p>
-      <p>Production-ready sales forecasting system combining ML, generative AI, and DevOps practices. Built end-to-end ML pipeline, REST API with FastAPI, containerized with Docker, deployed with Kubernetes and Jenkins CI/CD.</p>
-      <p><strong>Tech Stack:</strong> Python, SQLite, FastAPI, Docker, Kubernetes, Jenkins, OpenAI GPT-4, Power BI</p>
-    </div>
-    <div class="card">
-      <h3>Banking Churn Prediction</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Banking-Churn-Prediction" target="_blank">View Project</a></p>
-      <p>Full end-to-end banking customer churn analysis using synthetic data. Comprehensive exploratory data analysis, feature engineering, multiple ML models, and evaluation metrics (ROC-AUC, confusion matrices, classification reports).</p>
-      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
-    </div>
-    <div class="card">
-      <h3>Credit Card Fraud Detection</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Credit-Card-Analysis" target="_blank">View Project</a></p>
-      <p>End-to-end credit card fraud detection project using synthetic data. Implemented classification models with imbalanced data handling, feature scaling, and comprehensive performance evaluation.</p>
-      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
-    </div>
-    <div class="card">
-      <h3>House Price Analysis and Prediction</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/House-Price-Analysis-And-Prediction" target="_blank">View Project</a></p>
-      <p>End-to-end analysis and prediction of house prices using Python. Performed EDA, feature engineering, implemented regression models, and built predictive pipelines for real estate valuation.</p>
-      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</p>
-    </div>
-    <div class="card">
-      <h3>NHS Data Analysis</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/NHS-ANALYSIS" target="_blank">View Project</a></p>
-      <p>Automation scripts, patient data cleaning and survey analysis using Python. Developed data pipelines for healthcare data processing and analytical insights.</p>
-      <p><strong>Tech Stack:</strong> Python, Pandas, NumPy, Data Cleaning, Automation</p>
-    </div>
-    <div class="card">
-      <h3>Sales Analysis and Forecasting</h3>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Sales-Analysis-and-Forecasting-Using-ML-Models" target="_blank">View Project</a></p>
-      <p>End-to-end sales analysis and forecasting task using Python. Performed time-series analysis, implemented ML models for demand forecasting, and created actionable business insights.</p>
-      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, NumPy, Time-Series Analysis</p>
-    </div>
-  </div>
-</section>
-
-<section id="ai-fine-tuning">
-  <h2>AI Fine-Tuning Services</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Custom AI Model Fine-Tuning</h3>
-      <p>I specialize in fine-tuning local AI models tailored to your specific business needs. Whether you need domain-specific language models, custom ML pipelines, or specialized AI solutions, I can help optimize models for your unique requirements.</p>
-      <ul>
-        <li>Domain-specific model adaptation</li>
-        <li>Transfer learning and custom training</li>
-        <li>Privacy-focused local AI deployment</li>
-        <li>Integration with your existing systems</li>
-      </ul>
-      <p><strong>Applications:</strong> Chatbots, document processing, content analysis, predictive modeling, and specialized business intelligence systems.</p>
-    </div>
-    <div class="card">
-      <h3>Why Fine-Tuned AI?</h3>
-      <ul>
-        <li><strong>Better Accuracy:</strong> Models trained on your specific data perform significantly better</li>
-        <li><strong>Cost Efficiency:</strong> Local deployment reduces API costs and dependency on external services</li>
-        <li><strong>Data Privacy:</strong> Keep sensitive business data secure on your own infrastructure</li>
-        <li><strong>Customization:</strong> Tailor AI behavior to match your exact business workflows</li>
-        <li><strong>Control:</strong> Full control over model updates, versioning, and deployment</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Get Started</h3>
-      <p>Interested in leveraging fine-tuned AI for your specific applications? Let's discuss your requirements and find the perfect solution.</p>
-      <p><strong>Email:</strong> <a href="mailto:prabhatdhar32@gmail.com">prabhatdhar32@gmail.com</a></p>
-      <p><strong>Subject Line Suggestion:</strong> "AI Fine-Tuning Inquiry"</p>
-      <p style="margin-top: 20px; font-size: 14px; color: #888;">Include details about your use case, data volume, and timeline for a quick response.</p>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Programming</h3>
-      <ul class="skills">
-        <li>Python</li>
-        <li>SQL</li>
-        <li>LaTeX</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Data Analysis & Tools</h3>
-      <ul class="skills">
-        <li>Pandas</li>
-        <li>NumPy</li>
-        <li>Excel</li>
-        <li>Jupyter</li>
-        <li>Google Colab</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Data Visualisation</h3>
-      <ul class="skills">
-        <li>Power BI</li>
-        <li>Matplotlib</li>
-        <li>Seaborn</li>
-        <li>Plotly</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Machine Learning & Advanced</h3>
-      <ul class="skills">
-        <li>Scikit-learn</li>
-        <li>TensorFlow</li>
-        <li>PyTorch</li>
-        <li>PyCaret</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>DevOps & Deployment</h3>
-      <ul class="skills">
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>Jenkins</li>
-        <li>FastAPI</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Development Tools</h3>
-      <ul class="skills">
-        <li>Git</li>
-        <li>Github</li>
-        <li>VSCode</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="certifications">
-  <h2>Certifications & Languages</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Certifications</h3>
-      <ul>
-        <li><strong>English SELT ISE 1:</strong> Trinity College (Distinction in Writing, Speaking & Listening; Merit in Reading)</li>
-        <li><strong>DBS Certification:</strong> All checks passed</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Languages</h3>
-      <ul>
-        <li>English</li>
-        <li>Hindi</li>
-        <li>Bengali</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> <a href="mailto:prabhatdhar32@gmail.com">prabhatdhar32@gmail.com</a></p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/prabhat-dhar-13723618b/" target="_blank">linkedin.com/in/prabhat-dhar-13723618b</a></p>
-  <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07" target="_blank">github.com/Xclipxz07</a></p>
-  <p><strong>Location:</strong> London, UK</p>
-</section>
-
-
-<footer>
-  <p>© 2026 Prabhat Dhar</p>
-</footer>
-
-<!-- CHATBOT -->
-<button class="chat-toggle" onclick="toggleChat()">💬</button>
-<div class="chatbot" id="chatbot">
-  <div class="chatbot-header">Ask Me</div>
-  <div class="chatbot-messages" id="messages">
-    <div class="msg bot">Hi! Ask me about my skills, projects, or experience.</div>
-  </div>
-  <div class="chatbot-input">
-    <input id="userInput" placeholder="Type a question..." />
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
-
-<script>
-  function toggleChat() {
-    const bot = document.getElementById('chatbot');
-    bot.style.display = bot.style.display === 'flex' ? 'none' : 'flex';
-  }
-
-  function sendMessage() {
-    const input = document.getElementById('userInput');
-    const msg = input.value.toLowerCase();
-    if (!msg) return;
-
-    const messages = document.getElementById('messages');
-    messages.innerHTML += `<div class='msg user'>${input.value}</div>`;
-
-    let reply = "I can tell you about my skills, projects, education, or experience. What would you like to know?";
-    if (msg.includes('skill')) reply = "I specialize in Python, SQL, Power BI, Machine Learning (Scikit-learn, TensorFlow, PyTorch), Docker, Kubernetes, FastAPI, and data visualization with Matplotlib, Seaborn, and Plotly.";
-    if (msg.includes('project')) reply = "I've worked on: 1) Health and Fitness AI App with ML recommendations, 2) Rainfall Prediction dissertation using PyCaret AutoML, and 3) Data Analysis for DevOps/MLOps with full CI/CD pipeline. All available on GitHub.";
-    if (msg.includes('experience')) reply = "I work as a Care Assistant at Everycare Ltd since 2023, handling data management, Excel analysis, and GDPR-compliant reporting. Previously at KFC developing operational and teamwork skills.";
-    if (msg.includes('education')) reply = "I have a PG Diploma in Data Science from University of Essex (2022) and a Bachelor's in Physics from University of Calcutta (2021).";
-    if (msg.includes('devops') || msg.includes('mlops')) reply = "I have experience with Docker, Kubernetes, Jenkins, FastAPI, and full CI/CD pipeline automation. I built a production-ready sales forecasting system with these technologies.";
-
-    messages.innerHTML += `<div class='msg bot'>${reply}</div>`;
-    messages.scrollTop = messages.scrollHeight;
-    input.value = '';
-  }
-
-  // Close chatbot when clicking outside
-  document.addEventListener('click', function(event) {
-    const bot = document.getElementById('chatbot');
-    const toggleBtn = document.querySelector('.chat-toggle');
-    
-    // Check if chatbot is open and click is outside both chatbot and toggle button
-    if (bot.style.display === 'flex' && 
-        !bot.contains(event.target) && 
-        !toggleBtn.contains(event.target)) {
-      bot.style.display = 'none';
+  <script>
+    function toggleChat() {
+      const bot = document.getElementById('chatbot');
+      bot.style.display = bot.style.display === 'flex' ? 'none' : 'flex';
     }
-  });
-</script>
+
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const msg = input.value.toLowerCase();
+      if (!msg) return;
+
+      const messages = document.getElementById('messages');
+      messages.innerHTML += `<div class='msg user'>${input.value}</div>`;
+
+      let reply = "I can tell you about my skills, projects, education, or experience. What would you like to know?";
+      if (msg.includes('skill')) reply = "I specialize in Python, SQL, Power BI, Machine Learning (Scikit-learn, TensorFlow, PyTorch), Docker, Kubernetes, FastAPI, and data visualization with Matplotlib, Seaborn, and Plotly.";
+      if (msg.includes('project')) reply = "I've worked on: 1) Health and Fitness AI App with ML recommendations, 2) Rainfall Prediction dissertation using PyCaret AutoML, and 3) Data Analysis for DevOps/MLOps with full CI/CD pipeline. All available on GitHub.";
+      if (msg.includes('experience')) reply = "I work as a Care Assistant at Everycare Ltd since 2023, handling data management, Excel analysis, and GDPR-compliant reporting. Previously at KFC developing operational and teamwork skills.";
+      if (msg.includes('education')) reply = "I have a PG Diploma in Data Science from University of Essex (2022) and a Bachelor's in Physics from University of Calcutta (2021).";
+      if (msg.includes('devops') || msg.includes('mlops')) reply = "I have experience with Docker, Kubernetes, Jenkins, FastAPI, and full CI/CD pipeline automation. I built a production-ready sales forecasting system with these technologies.";
+
+      messages.innerHTML += `<div class='msg bot'>${reply}</div>`;
+      messages.scrollTop = messages.scrollHeight;
+      input.value = '';
+    }
+
+    // Close chatbot when clicking outside
+    document.addEventListener('click', function (event) {
+      const bot = document.getElementById('chatbot');
+      const toggleBtn = document.querySelector('.chat-toggle');
+
+      // Check if chatbot is open and click is outside both chatbot and toggle button
+      if (bot.style.display === 'flex' &&
+        !bot.contains(event.target) &&
+        !toggleBtn.contains(event.target)) {
+        bot.style.display = 'none';
+      }
+    });
+  </script>
 
 </body>
+
 </html>
