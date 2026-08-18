@@ -6,7 +6,7 @@
 ---
 
 ## PROFESSIONAL SUMMARY
-> *“If a human has to manually click a button every morning, the engineer hasn’t finished the job yet.”*
+> *“Theoretical physicist turned Data architect. I build things that redefine what’s possible—usually over a weekend, usually while listening to AC/DC.”*
 
 I combine a foundation in **Pure Physics (B.Sc., University of Calcutta)** with advanced **Data Science (PGDip, University of Essex)**. My approach is simple: understand systems from first principles, automate the heavy lifting, and build solutions that work fast and never break. Rather than just analyzing numbers, I architect automated cloud lakehouses on AWS, deploy sub-millisecond machine learning models in Python, and build clear executive dashboards that make complex decisions effortless. **Based in London, UK, and actively available for full-time roles (UK Skilled Worker Visa Sponsorship Required).**
 
