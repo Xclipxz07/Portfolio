@@ -6,7 +6,7 @@
 ---
 
 ## PROFESSIONAL SUMMARY
-**Data Architect & Machine Learning Engineer** with a foundation in **Pure Physics (B.Sc., University of Calcutta)** and a **Postgraduate Diploma in Data Science (University of Essex)**. I don't build toy projects — I engineer production systems that solve high-stakes engineering and financial bottlenecks: replacing 8-hour 3D CFD aerodynamic simulations with sub-millisecond AI surrogate models (<0.05ms), architecting AWS serverless lakehouses (S3, Glue, Athena) that cut query scan costs by 85%, and automating 2:00 AM enterprise ETL pipelines with Apache Airflow, PySpark, and Terraform. **Actively available for full-time UK opportunities (Skilled Worker Visa Sponsorship Required).**
+**Data Architect and Machine Learning Engineer** with a background in **Pure Physics (B.Sc., University of Calcutta)** and a **Postgraduate Diploma in Data Science (University of Essex)**. I combine rigorous mathematical problem-solving with modern cloud and AI engineering. Rather than writing one-off scripts, I architect automated data pipelines on AWS, build fast machine learning models in Python, and deliver executive BI dashboards that solve real business bottlenecks. **Based in London, UK, and actively available for full-time roles (UK Skilled Worker Visa Sponsorship Required).**
 
 ---
 
