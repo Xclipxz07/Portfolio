@@ -6,7 +6,7 @@
 ---
 
 ## PROFESSIONAL SUMMARY
-Physics-grounded **Data Architect & Machine Learning Engineer** with a B.Sc. in Physics and a Postgraduate Diploma in Data Science from the University of Essex. Proven expertise engineering end-to-end cloud lakehouses, sub-millisecond AI surrogate models, and automated CI/CD pipelines. Specializes in building high-throughput, cost-optimized AWS architectures (S3, Glue, Athena, EMR PySpark), Apache Airflow orchestration, Snappy Parquet partitioning, and production MLOps deployments. Actively available for UK full-time opportunities (Skilled Worker Visa Sponsorship Required).
+**Data Architect & Machine Learning Engineer** with a foundation in **Pure Physics (B.Sc., University of Calcutta)** and a **Postgraduate Diploma in Data Science (University of Essex)**. I don't build toy projects — I engineer production systems that solve high-stakes engineering and financial bottlenecks: replacing 8-hour 3D CFD aerodynamic simulations with sub-millisecond AI surrogate models (<0.05ms), architecting AWS serverless lakehouses (S3, Glue, Athena) that cut query scan costs by 85%, and automating 2:00 AM enterprise ETL pipelines with Apache Airflow, PySpark, and Terraform. **Actively available for full-time UK opportunities (Skilled Worker Visa Sponsorship Required).**
 
 ---
 
@@ -103,6 +103,16 @@ Physics-grounded **Data Architect & Machine Learning Engineer** with a B.Sc. in 
 
 ---
 
-## LANGUAGES & ADDITIONAL INFO
-* **Languages:** English (Fluent), Hindi (Native), Bengali (Native)
-* **GitHub Portfolios:** [github.com/Xclipxz07](https://github.com/Xclipxz07) | References available upon request
+## 🗣️ LANGUAGES & COMMUNICATION (HIGHLIGHTED)
+
+| Language | Proficiency Level | Credential / Notes |
+| :--- | :--- | :--- |
+| 🇬🇧 **English** | **Fluent / Full Professional** | **Trinity College London SELT ISE 1 — Distinction** *(Speaking, Listening & Writing)* |
+| 🇮🇳 **Hindi** | **Native / Bilingual** | Full professional business communication |
+| 🇮🇳 **Bengali** | **Native / Bilingual** | Full professional business communication |
+
+---
+
+* **Global Repositories:** [github.com/Xclipxz07](https://github.com/Xclipxz07)  
+* **Interactive Demos:** [xclipxz07.github.io/Portfolio](https://xclipxz07.github.io/Portfolio/)  
+* *References available upon request*
