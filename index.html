@@ -17,7 +17,7 @@
       --bg-card-hover: rgba(30, 41, 59, 0.85);
       --arc-cyan: #00f0ff;
       --arc-blue: #0088ff;
-      --stark-gold: #f59e0b;
+      --accent-gold: #f59e0b;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-sub: #cbd5e1;
@@ -156,8 +156,8 @@
       letter-spacing: 0.2px;
     }
 
-    /* TONY STARK ICONIC QUOTE BOX */
-    .stark-quote-card {
+    /* HIGH-IMPACT QUOTE BOX */
+    .quote-card {
       background: rgba(11, 17, 32, 0.9);
       border: 1.5px solid var(--border-glow);
       box-shadow: var(--glow-cyan);
@@ -170,7 +170,7 @@
       text-align: left;
     }
 
-    .stark-quote-card::before {
+    .quote-card::before {
       content: '';
       position: absolute;
       top: 0;
@@ -180,7 +180,7 @@
       background: linear-gradient(to bottom, var(--arc-cyan), var(--arc-blue));
     }
 
-    .stark-quote-text {
+    .quote-text {
       font-size: 19px;
       font-weight: 700;
       line-height: 1.5;
@@ -193,14 +193,14 @@
       gap: 12px;
     }
 
-    .stark-quote-text .quote-mark {
+    .quote-text .quote-mark {
       color: var(--arc-cyan);
       font-size: 32px;
       line-height: 1;
       font-family: Georgia, serif;
     }
 
-    .stark-quote-sub {
+    .quote-sub {
       font-size: 13.5px;
       color: var(--text-muted);
       font-family: 'JetBrains Mono', monospace;
@@ -332,7 +332,7 @@
     .card .meta-line {
       font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
-      color: var(--stark-gold);
+      color: var(--accent-gold);
       margin-bottom: 14px;
       font-weight: 600;
     }
@@ -579,7 +579,7 @@
 
     @media (max-width: 768px) {
       header h1 { font-size: 42px; }
-      .stark-quote-text { font-size: 16px; }
+      .quote-text { font-size: 16px; }
       nav ul { display: none; }
       .grid { grid-template-columns: 1fr; }
       .chatbot { width: 92vw; right: 4vw; }
@@ -618,19 +618,19 @@
     <h1>PRABHAT DHAR</h1>
     <div class="hero-subtitle">Theoretical Physicist turned Data Architect & Machine Learning Engineer</div>
 
-    <!-- TONY STARK ICONIC QUOTE -->
-    <div class="stark-quote-card">
-      <div class="stark-quote-text">
+    <!-- ICONIC FIRST-PRINCIPLES QUOTE -->
+    <div class="quote-card">
+      <div class="quote-text">
         <span class="quote-mark">“</span>
         <span>Theoretical physicist turned Data architect. I build things that redefine what’s possible—usually over a weekend, usually while listening to AC/DC.</span>
       </div>
-      <div class="stark-quote-sub">
+      <div class="quote-sub">
         // LOCATION: LONDON, UK • STATUS: AVAILABLE (UK VISA SPONSORSHIP REQUIRED)
       </div>
     </div>
 
     <div class="cta-container">
-      <a class="btn" href="Prabhatcv.pdf" download="Prabhat_Dhar_CV.pdf">📄 Download Stark CV (PDF)</a>
+      <a class="btn" href="Prabhatcv.pdf" download="Prabhat_Dhar_CV.pdf">📄 Download CV (PDF)</a>
       <a class="btn btn-secondary" href="https://github.com/Xclipxz07" target="_blank">🐙 Access GitHub Labs</a>
       <a class="btn btn-secondary" href="http://linkedin.com/in/prabhat-dhar-13723618b" target="_blank">💼 LinkedIn Uplink</a>
     </div>
@@ -836,8 +836,8 @@
   <!-- SKILLS / ARSENAL -->
   <section id="skills">
     <div class="section-header">
-      <span class="section-tag">// STARK ARSENAL</span>
-      <h2>Technical Capabilities</h2>
+      <span class="section-tag">// TECHNICAL ARSENAL</span>
+      <h2>Core Capabilities</h2>
     </div>
     <div class="skills-grid">
       <div class="skill-card">
@@ -1053,7 +1053,7 @@
   <button class="chat-toggle" onclick="toggleChat()" title="Talk to AI Assistant">💬</button>
   <div class="chatbot" id="chatbot">
     <div class="chatbot-header">
-      <span>● JARVIS // PRABHAT'S AI ASSISTANT</span>
+      <span>● AI ASSISTANT // PRABHAT DHAR</span>
       <span style="cursor:pointer;" onclick="toggleChat()">✕</span>
     </div>
     <div class="chatbot-messages" id="messages">
