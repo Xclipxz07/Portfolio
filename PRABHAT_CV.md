@@ -1,12 +1,12 @@
 # PRABHAT DHAR
 **Data Architect | Cloud Data Engineer | Machine Learning Specialist**  
 📍 London, United Kingdom | 📧 [prabhatdhar32@gmail.com](mailto:prabhatdhar32@gmail.com) | 💼 [LinkedIn](http://linkedin.com/in/prabhat-dhar-13723618b) | 🐙 [GitHub: Xclipxz07](https://github.com/Xclipxz07) | 🌐 [Portfolio](https://xclipxz07.github.io/Portfolio/)  
-🇬🇧 **UK Work Status:** Eligible to work in the UK (20 hrs/week)
+🇬🇧 **UK Work Status:** Available to Work (UK Visa Sponsorship Required / Skilled Worker Route Eligible)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-Physics-grounded **Data Architect & Machine Learning Engineer** with a B.Sc. in Physics and a Postgraduate Diploma in Data Science from the University of Essex. Proven expertise engineering end-to-end cloud lakehouses, sub-millisecond AI surrogate models, and automated CI/CD pipelines. Specializes in building high-throughput, cost-optimized AWS architectures (S3, Glue, Athena, EMR PySpark), Apache Airflow orchestration, Snappy Parquet partitioning, and production MLOps deployments.
+Physics-grounded **Data Architect & Machine Learning Engineer** with a B.Sc. in Physics and a Postgraduate Diploma in Data Science from the University of Essex. Proven expertise engineering end-to-end cloud lakehouses, sub-millisecond AI surrogate models, and automated CI/CD pipelines. Specializes in building high-throughput, cost-optimized AWS architectures (S3, Glue, Athena, EMR PySpark), Apache Airflow orchestration, Snappy Parquet partitioning, and production MLOps deployments. Actively available for UK full-time opportunities (Skilled Worker Visa Sponsorship Required).
 
 ---
 
