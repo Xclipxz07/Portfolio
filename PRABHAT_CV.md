@@ -1,12 +1,12 @@
 # PRABHAT DHAR
 **Data Architect | Cloud Data Engineer | Machine Learning Specialist**  
-📍 London, United Kingdom | 📧 [prabhatdhar32@gmail.com](mailto:prabhatdhar32@gmail.com) | 💼 [LinkedIn](http://linkedin.com/in/prabhat-dhar-13723618b) | 🐙 [GitHub: Xclipxz07](https://github.com/Xclipxz07) | 🌐 [Portfolio](https://xclipxz07.github.io/Portfolio/)  
+📍 London, UK | 📧 [prabhatdhar32@gmail.com](mailto:prabhatdhar32@gmail.com) | 💼 [linkedin.com/in/prabhat-dhar](http://linkedin.com/in/prabhat-dhar-13723618b) | 🐙 [github.com/Xclipxz07](https://github.com/Xclipxz07) | 🌐 [xclipxz07.github.io/Portfolio](https://xclipxz07.github.io/Portfolio/)  
 🇬🇧 **UK Work Status:** Available to Work (UK Visa Sponsorship Required / Skilled Worker Route Eligible)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-**Data Architect and Machine Learning Engineer** with a background in **Pure Physics (B.Sc., University of Calcutta)** and a **Postgraduate Diploma in Data Science (University of Essex)**. I combine rigorous mathematical problem-solving with modern cloud and AI engineering. Rather than writing one-off scripts, I architect automated data pipelines on AWS, build fast machine learning models in Python, and deliver executive BI dashboards that solve real business bottlenecks. **Based in London, UK, and actively available for full-time roles (UK Skilled Worker Visa Sponsorship Required).**
+I started in **Pure Physics (B.Sc., University of Calcutta)** because understanding how complex systems work from first principles matters before writing a single line of code. I followed that up with a **Postgraduate Diploma in Data Science at the University of Essex**. Some people just analyze data; I build the entire pipeline from scratch. Whether it is training machine learning models that run in milliseconds, architecting automated cloud lakehouses on AWS, or building dashboards that make complex numbers obvious — I make systems faster, smarter, and completely automated. **Based in London, UK, and actively available for full-time roles (UK Skilled Worker Visa Sponsorship Required).**
 
 ---
 
