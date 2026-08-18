@@ -4,18 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prabhat Dhar | Data Architect & Machine Learning Engineer</title>
-  <meta name="description" content="Official portfolio of Prabhat Dhar: Data Architect, Cloud Data Engineer, and Machine Learning Specialist based in London, UK.">
+  <title>Prabhat Dhar | Theoretical Physicist & Data Architect</title>
+  <meta name="description" content="Portfolio of Prabhat Dhar: Theoretical Physicist turned Data Architect & Machine Learning Specialist. Based in London, UK.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-base: #060911;
+      --bg-surface: #0b1120;
+      --bg-card: rgba(15, 23, 42, 0.75);
+      --bg-card-hover: rgba(30, 41, 59, 0.85);
+      --arc-cyan: #00f0ff;
+      --arc-blue: #0088ff;
+      --stark-gold: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-sub: #cbd5e1;
+      --border-subtle: rgba(0, 240, 255, 0.12);
+      --border-glow: rgba(0, 240, 255, 0.35);
+      --glow-cyan: 0 0 25px rgba(0, 240, 255, 0.25);
+    }
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
-      background: linear-gradient(to bottom, #ffffff 0%, #f5f7ff 50%, #eff0ff 100%);
-      color: #1d1d1f;
+      background-color: var(--bg-base);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 136, 255, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 90% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -24,376 +50,525 @@
     nav {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(30px);
-      padding: 14px 0;
+      background: rgba(6, 9, 17, 0.85);
+      backdrop-filter: blur(20px);
+      padding: 16px 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(0, 113, 227, 0.1);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    nav .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--arc-cyan);
+      letter-spacing: 1px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-brand .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--arc-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--arc-cyan);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
-      gap: 35px;
-      margin: 0;
-      padding: 0;
-      flex-wrap: wrap;
+      gap: 28px;
+      align-items: center;
     }
 
     nav a {
-      color: #1d1d1f;
+      color: var(--text-sub);
       text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: all 0.25s ease;
       letter-spacing: 0.3px;
     }
 
     nav a:hover {
-      color: #0071e3;
+      color: var(--arc-cyan);
+      text-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
     }
 
-    /* HEADER */
+    /* HERO SECTION */
     header {
-      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
-      color: #1d1d1f;
-      padding: 120px 20px 100px 20px;
+      padding: 100px 24px 80px 24px;
       text-align: center;
-      border-bottom: 2px solid rgba(0, 113, 227, 0.1);
       position: relative;
-      overflow: hidden;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(0, 113, 227, 0.12) 0%, transparent 70%);
-      border-radius: 50%;
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 18px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--arc-cyan);
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
     }
 
     header h1 {
-      font-size: 58px;
-      margin: 0 0 16px 0;
-      font-weight: 800;
-      letter-spacing: -1px;
-      position: relative;
-      z-index: 1;
-      background: linear-gradient(135deg, #0071e3, #00a8ff);
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--arc-cyan) 80%, var(--arc-blue) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
-    header p {
-      font-size: 18px;
-      margin: 8px 0;
-      color: #475569;
-      font-weight: 500;
-      letter-spacing: 0.3px;
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--text-sub);
+      font-weight: 400;
+      margin-bottom: 28px;
+      letter-spacing: 0.2px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 32px;
-      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 980px;
-      font-weight: 600;
-      font-size: 15px;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 8px 24px rgba(0, 113, 227, 0.25);
-      position: relative;
-      z-index: 1;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(0, 113, 227, 0.35);
-    }
-
-    section {
-      padding: 90px 20px;
-      max-width: 1280px;
-      margin: auto;
-    }
-
-    #education {
-      background: linear-gradient(to right, rgba(0, 200, 100, 0.03), rgba(0, 150, 200, 0.03));
-    }
-
-    #experience {
-      background: linear-gradient(to right, rgba(255, 150, 0, 0.03), rgba(255, 100, 50, 0.03));
-    }
-
-    #projects {
-      background: linear-gradient(to right, rgba(0, 100, 200, 0.03), rgba(100, 50, 200, 0.03));
-    }
-
-    #skills {
-      background: linear-gradient(to right, rgba(200, 50, 100, 0.03), rgba(255, 100, 0, 0.03));
-    }
-
-    #certifications {
-      background: linear-gradient(to right, rgba(100, 200, 100, 0.03), rgba(50, 150, 100, 0.03));
-    }
-
-    h2 {
-      font-size: 42px;
-      font-weight: 800;
-      margin-bottom: 50px;
-      text-align: center;
-      color: #0f172a;
-      border: none;
-      letter-spacing: -0.7px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
-      padding: 38px;
-      border-radius: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1.5px solid rgba(0, 113, 227, 0.12);
+    /* TONY STARK ICONIC QUOTE BOX */
+    .stark-quote-card {
+      background: rgba(11, 17, 32, 0.9);
+      border: 1.5px solid var(--border-glow);
+      box-shadow: var(--glow-cyan);
+      border-radius: 16px;
+      padding: 26px 32px;
+      margin: 0 auto 36px auto;
+      max-width: 860px;
       position: relative;
       overflow: hidden;
+      text-align: left;
     }
 
-    .card::before {
+    .stark-quote-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, #0071e3, #00a8ff, #06b6d4);
-      opacity: 0;
-      transition: opacity 0.5s ease;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--arc-cyan), var(--arc-blue));
+    }
+
+    .stark-quote-text {
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #ffffff;
+      font-style: italic;
+      letter-spacing: 0.2px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .stark-quote-text .quote-mark {
+      color: var(--arc-cyan);
+      font-size: 32px;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .stark-quote-sub {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      margin-left: 28px;
+    }
+
+    .cta-container {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 30px;
+      background: linear-gradient(135deg, var(--arc-blue), #0055cc);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14.5px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(0, 136, 255, 0.4);
+      box-shadow: 0 4px 20px rgba(0, 136, 255, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 240, 255, 0.4);
+      border-color: var(--arc-cyan);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-subtle);
+      box-shadow: none;
+      color: var(--text-sub);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(30, 41, 59, 0.9);
+      border-color: var(--arc-cyan);
+      color: var(--arc-cyan);
+    }
+
+    /* METRICS BAR */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 1060px;
+      margin: 40px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    .metric-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .metric-box:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .metric-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--arc-cyan);
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 600;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 85px 24px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--arc-cyan);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      color: #ffffff;
+    }
+
+    /* CARDS & GRIDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card:hover {
-      background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
-      transform: translateY(-8px);
-      box-shadow: 0 12px 35px rgba(0, 113, 227, 0.18), 0 4px 12px rgba(0, 0, 0, 0.04);
-      border-color: rgba(0, 113, 227, 0.3);
+      background: var(--bg-card-hover);
+      border-color: var(--border-glow);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.1);
     }
 
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    #education .card {
-      border-left: 5px solid #00c864;
-    }
-
-    #experience .card {
-      border-left: 5px solid #ff9500;
-    }
-
-    #projects .card {
-      border-left: 5px solid #0071e3;
-    }
-
-    .card h3 {
-      color: #0f172a;
-      margin: 0 0 12px 0;
-      font-size: 21px;
+    .card-top h3 {
+      font-size: 20px;
       font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.3px;
+      color: #ffffff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .card p {
-      color: #475569;
-      margin: 12px 0;
+      color: var(--text-sub);
       font-size: 14.5px;
       line-height: 1.65;
-      letter-spacing: 0.1px;
+      margin-bottom: 16px;
     }
 
     .card strong {
-      color: #0071e3;
-      font-weight: 700;
+      color: var(--arc-cyan);
     }
 
-    .card a {
-      color: #0071e3;
-      text-decoration: none;
+    .card .meta-line {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--stark-gold);
+      margin-bottom: 14px;
       font-weight: 600;
-      font-size: 14px;
-      transition: all 0.3s ease;
+    }
+
+    .tech-pill-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .tech-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      background: rgba(0, 240, 255, 0.08);
+      color: var(--arc-cyan);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-weight: 600;
+    }
+
+    .card-link {
+      margin-top: 18px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      color: var(--arc-cyan);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s ease;
     }
 
-    .card a::after {
-      content: '→';
-      transition: transform 0.3s ease;
-    }
-
-    .card a:hover {
-      color: #005fcc;
-    }
-
-    .card a:hover::after {
-      transform: translateX(4px);
+    .card-link:hover {
+      gap: 10px;
+      text-shadow: 0 0 10px var(--arc-cyan);
     }
 
     .card ul {
-      margin: 16px 0;
-      padding-left: 0;
       list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
     }
 
     .card li {
-      margin: 10px 0;
-      color: #475569;
       font-size: 14px;
-      line-height: 1.6;
+      color: var(--text-sub);
+      margin-bottom: 10px;
       padding-left: 18px;
       position: relative;
+      line-height: 1.6;
     }
 
     .card li::before {
-      content: '◆';
+      content: '⚡';
       position: absolute;
       left: 0;
-      color: #0071e3;
-      font-size: 7px;
-      top: 7px;
+      top: 0;
+      font-size: 10px;
+      color: var(--arc-cyan);
     }
 
-    ul.skills {
-      columns: 2;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      gap: 16px;
+    /* SKILLS PILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    ul.skills li {
-      background: linear-gradient(135deg, #f0f7ff 0%, #f5f5ff 100%);
-      color: #0071e3;
-      padding: 12px 14px;
-      margin: 8px 0;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 12.5px;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      display: block;
-      text-align: center;
-      border: 1.5px solid rgba(0, 113, 227, 0.15);
-      box-shadow: 0 2px 6px rgba(0, 113, 227, 0.04);
-      word-wrap: break-word;
-      overflow-wrap: break-word;
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 24px;
     }
 
-    ul.skills li:hover {
-      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
+    .skill-card h3 {
+      font-size: 16px;
+      color: var(--arc-cyan);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--arc-cyan);
       color: #ffffff;
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0, 113, 227, 0.25);
-      border-color: rgba(0, 113, 227, 0.5);
+      transform: translateY(-2px);
     }
 
+    /* FOOTER */
     footer {
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(240, 244, 255, 0.8) 100%);
-      color: #64748b;
+      border-top: 1px solid var(--border-subtle);
+      background: #03060d;
+      padding: 50px 24px;
       text-align: center;
-      padding: 45px 20px;
-      border-top: 2px solid rgba(0, 113, 227, 0.1);
+      color: var(--text-muted);
       font-size: 13.5px;
-      letter-spacing: 0.3px;
+    }
+
+    footer a {
+      color: var(--arc-cyan);
+      text-decoration: none;
     }
 
     /* CHATBOT */
     .chatbot {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 370px;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 25px 60px rgba(0, 113, 227, 0.2);
+      bottom: 24px;
+      right: 24px;
+      width: 380px;
+      background: #0b1222;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 240, 255, 0.2);
       display: none;
       flex-direction: column;
       overflow: hidden;
-      animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 2px solid rgba(0, 113, 227, 0.15);
+      animation: slideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1.5px solid var(--border-glow);
       z-index: 10000;
     }
 
     @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     .chatbot-header {
-      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
+      background: linear-gradient(135deg, #0b152b, #111e38);
+      border-bottom: 1px solid var(--border-subtle);
       color: #ffffff;
-      padding: 18px 22px;
+      padding: 16px 20px;
       font-weight: 700;
-      text-align: center;
-      font-size: 15px;
-      letter-spacing: 0.3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .chatbot-messages {
-      padding: 20px;
+      padding: 18px;
       height: 320px;
       overflow-y: auto;
       font-size: 13.5px;
-      background: #fafbff;
+      background: #080d1a;
     }
 
     .msg.bot {
-      color: #1e293b;
-      margin-bottom: 14px;
-      padding: 12px 16px;
-      background: #f0f4ff;
-      border-radius: 14px;
-      border: 1px solid rgba(0, 113, 227, 0.1);
+      color: var(--text-main);
+      margin-bottom: 12px;
+      padding: 12px 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
       line-height: 1.5;
-      font-size: 13.5px;
     }
 
     .msg.user {
       color: #ffffff;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-align: right;
-      padding: 12px 16px;
-      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
-      border-radius: 14px;
-      margin-left: 45px;
+      padding: 12px 14px;
+      background: linear-gradient(135deg, var(--arc-blue), #0055cc);
+      border-radius: 12px;
+      margin-left: 40px;
       line-height: 1.5;
-      font-size: 13.5px;
     }
 
     .chatbot-input {
       display: flex;
-      border-top: 2px solid rgba(0, 113, 227, 0.1);
-      background: #ffffff;
+      border-top: 1px solid var(--border-subtle);
+      background: #0b1222;
     }
 
     .chatbot-input input {
@@ -401,13 +576,10 @@
       padding: 14px 16px;
       border: none;
       outline: none;
-      font-size: 14px;
+      font-size: 13.5px;
       background: transparent;
+      color: #ffffff;
       font-family: inherit;
-    }
-
-    .chatbot-input input::placeholder {
-      color: #94a3b8;
     }
 
     .chatbot-input button {
@@ -415,349 +587,542 @@
       border: none;
       padding: 14px 18px;
       cursor: pointer;
-      color: #0071e3;
+      color: var(--arc-cyan);
       font-weight: 700;
-      transition: all 0.3s ease;
-      font-size: 14px;
-    }
-
-    .chatbot-input button:hover {
-      opacity: 0.7;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .chat-toggle {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: linear-gradient(135deg, #0071e3 0%, #005fcc 100%);
-      color: #ffffff;
+      bottom: 24px;
+      right: 24px;
+      background: linear-gradient(135deg, var(--arc-cyan), var(--arc-blue));
+      color: #030712;
       border-radius: 50%;
-      width: 66px;
-      height: 66px;
-      font-size: 28px;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0, 113, 227, 0.35);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      font-weight: 600;
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.45);
+      transition: all 0.3s ease;
+      font-weight: 800;
       z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .chat-toggle:hover {
-      box-shadow: 0 14px 40px rgba(0, 113, 227, 0.45);
-      transform: scale(1.08);
+      transform: scale(1.1);
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.7);
     }
 
-    @media (max-width: 600px) {
-      ul.skills {
-        columns: 1;
-      }
-
-      nav ul {
-        gap: 15px;
-      }
-
-      header h1 {
-        font-size: 40px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .chatbot {
-        width: 92vw;
-      }
-
-      section {
-        padding: 60px 16px;
-      }
-
-      h2 {
-        font-size: 32px;
-      }
+    @media (max-width: 768px) {
+      header h1 { font-size: 42px; }
+      .stark-quote-text { font-size: 16px; }
+      nav ul { display: none; }
+      .grid { grid-template-columns: 1fr; }
+      .chatbot { width: 92vw; right: 4vw; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="apex/index.html"
-          style="color: #0071e3; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-          <svg width="16" height="16" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle;">
-            <circle cx="20" cy="20" r="18" fill="none" stroke="#0071e3" stroke-width="1.5" opacity="0.4" />
-            <line x1="10" y1="28" x2="20" y2="8" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" />
-            <line x1="30" y1="28" x2="20" y2="8" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" />
-            <line x1="14" y1="20" x2="26" y2="20" stroke="#00a8ff" stroke-width="2" stroke-linecap="round" />
-            <circle cx="12" cy="30" r="1.5" fill="#00a8ff" />
-            <circle cx="20" cy="32" r="1.5" fill="#0071e3" />
-            <circle cx="28" cy="30" r="1.5" fill="#00a8ff" />
-          </svg>
-          Apex
-        </a></li>
-    </ul>
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <span class="pulse-dot"></span>
+        PRABHAT.DHAR // LAB
+      </a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Builds</a></li>
+        <li><a href="#skills">Arsenal</a></li>
+        <li><a href="#experience">Field Record</a></li>
+        <li><a href="#education">Physics & Data</a></li>
+        <li><a href="#certifications">Clearances</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="apex/index.html" style="color: var(--arc-cyan); font-family: 'JetBrains Mono', monospace; font-weight: 700;">APEX //</a></li>
+      </ul>
+    </div>
   </nav>
 
+  <!-- HERO -->
   <header>
-    <h1>Prabhat Dhar</h1>
-    <p>Data Architect | Cloud Data Engineer | Machine Learning Specialist</p>
-    <p>📍 London, UK • 📧 <a href="mailto:prabhatdhar32@gmail.com" style="color: #0071e3; text-decoration: none;">prabhatdhar32@gmail.com</a> • 🇬🇧 <strong>Available to Work (UK Visa Sponsorship Required)</strong></p>
-    <div style="margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-      <a class="btn" href="Prabhatcv.pdf" download="Prabhat_Dhar_CV.pdf">📄 Download CV (PDF)</a>
-      <a class="btn" href="https://github.com/Xclipxz07" target="_blank" style="background: #0f172a; color: white;">🐙 GitHub Profile</a>
-      <a class="btn" href="http://linkedin.com/in/prabhat-dhar-13723618b" target="_blank" style="background: #0077b5; color: white;">💼 LinkedIn</a>
+    <div class="status-badge">
+      <span>● SYSTEM STATUS: ONLINE // LONDON, UK</span>
+    </div>
+
+    <h1>PRABHAT DHAR</h1>
+    <div class="hero-subtitle">Theoretical Physicist turned Data Architect & Machine Learning Engineer</div>
+
+    <!-- TONY STARK ICONIC QUOTE -->
+    <div class="stark-quote-card">
+      <div class="stark-quote-text">
+        <span class="quote-mark">“</span>
+        <span>Theoretical physicist turned Data architect. I build things that redefine what’s possible—usually over a weekend, usually while listening to AC/DC.</span>
+      </div>
+      <div class="stark-quote-sub">
+        // LOCATION: LONDON, UK • STATUS: AVAILABLE (UK VISA SPONSORSHIP REQUIRED)
+      </div>
+    </div>
+
+    <div class="cta-container">
+      <a class="btn" href="Prabhatcv.pdf" download="Prabhat_Dhar_CV.pdf">📄 Download Stark CV (PDF)</a>
+      <a class="btn btn-secondary" href="https://github.com/Xclipxz07" target="_blank">🐙 Access GitHub Labs</a>
+      <a class="btn btn-secondary" href="http://linkedin.com/in/prabhat-dhar-13723618b" target="_blank">💼 LinkedIn Uplink</a>
+    </div>
+
+    <!-- LIVE TELEMETRY / METRICS -->
+    <div class="metrics-bar">
+      <div class="metric-box">
+        <div class="metric-val">&lt; 0.05 ms</div>
+        <div class="metric-label">AI Surrogate CFD Inference</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-val">-85%</div>
+        <div class="metric-label">AWS Athena Scan Costs</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-val">2:00 AM</div>
+        <div class="metric-label">Autonomous Airflow ETL</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-val">165 Credits</div>
+        <div class="metric-label">Essex Data Science (Distinction)</div>
+      </div>
     </div>
   </header>
 
+  <!-- ABOUT -->
   <section id="about">
-    <h2>About Me</h2>
-    <div style="background: rgba(0, 113, 227, 0.05); border-left: 4px solid #0071e3; padding: 22px 28px; border-radius: 0 12px 12px 0; margin-bottom: 20px;">
-      <p style="font-size: 1.18em; font-style: italic; font-weight: 700; color: #0071e3; margin: 0 0 12px 0;">
-        “If a human has to manually click a button every morning, the engineer hasn’t finished the job yet.”
+    <div class="section-header">
+      <span class="section-tag">// FIRST PRINCIPLES</span>
+      <h2>The Core Directive</h2>
+    </div>
+    <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 36px; max-width: 960px; margin: 0 auto;">
+      <p style="font-size: 18px; line-height: 1.8; color: var(--text-sub); margin-bottom: 20px;">
+        I started in <strong>Pure Physics (B.Sc., University of Calcutta)</strong> because understanding thermodynamics, kinematics, and calculus from first principles is the ultimate foundation for engineering. Machine learning isn't magic—it's applied mathematics paired with high-performance compute.
       </p>
-      <p style="margin: 0; font-size: 1.03em; line-height: 1.7; color: #334155;">
-        I combine a foundation in <strong>Pure Physics (B.Sc., University of Calcutta)</strong> with advanced <strong>Data Science (PGDip, University of Essex)</strong>. My approach is simple: understand systems from first principles, automate the heavy lifting, and build solutions that work fast and never break. Rather than just analyzing numbers, I architect automated cloud lakehouses on AWS, deploy sub-millisecond machine learning models in Python, and build clear executive dashboards that make complex decisions effortless. <strong>Based in London, UK, and actively available for full-time roles (UK Skilled Worker Visa Sponsorship Required).</strong>
+      <p style="font-size: 16px; line-height: 1.8; color: var(--text-muted); margin-bottom: 0;">
+        Followed that up with a <strong>Postgraduate Diploma in Data Science at the University of Essex</strong>. I don't build toy projects. I engineer production systems that replace 8-hour simulations with sub-millisecond AI models, architect petabyte-scale serverless lakehouses that slash AWS cloud bills by 85%, and automate 2:00 AM enterprise pipelines so everything runs flawlessly while everyone is asleep.
       </p>
     </div>
   </section>
 
-  <section id="education">
-    <h2>Education & Academic Foundation</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🎓 PG Diploma in Data Science & Its Applications</h3>
-        <p><strong>University of Essex, Colchester, United Kingdom</strong></p>
-        <p style="color: #0071e3; font-weight: 600;">November 2022 • 165 Credits (Distinction Level)</p>
-      </div>
-      <div class="card">
-        <h3>⚛️ Bachelor of Science in Physics (Honours)</h3>
-        <p><strong>University of Calcutta, West Bengal, India</strong></p>
-        <p style="color: #0071e3; font-weight: 600;">August 2021 • 7.240 CGPA</p>
-      </div>
-      <div class="card">
-        <h3>🔬 I.S.C (12th Grade - Pure Science)</h3>
-        <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
-        <p style="color: #0071e3; font-weight: 600;">April 2017 • 85.0%</p>
-      </div>
-      <div class="card">
-        <h3>📐 I.C.S.E (10th Grade)</h3>
-        <p><strong>St. Xavier's Institution, Kolkata, India</strong></p>
-        <p style="color: #0071e3; font-weight: 600;">April 2015 • 93.8%</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Professional Work Experience</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Care Assistant & Data Analyst — Everycare Ltd</h3>
-        <p style="color: #0071e3; font-weight: 600;">April 2023 – June 2026 | London, UK</p>
-        <ul>
-          <li>Delivered person-centred care and maintained digital care observation logs, medication updates, and activity tracking in digital care systems while ensuring strict GDPR and safeguarding compliance.</li>
-          <li>Maintained and cleaned operational care records in Excel; engineered automated pivot models and dashboards tracking incident logs, attendance patterns, and staff allocations for shift leaders.</li>
-          <li>Analyzed care-related trends using Power BI to visualize medication timings, risk indicators, and response times; communicated weekly operational insights to senior management.</li>
-          <li>Wrote basic Python automation scripts to clean and preprocess raw care logs, reducing manual administrative workload by 40% and improving data accuracy for management audits.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Team Member — KFC (Demipower Ltd)</h3>
-        <p style="color: #0071e3; font-weight: 600;">January 2021 – March 2023 | Wood Green, London, UK</p>
-        <ul>
-          <li>Delivered fast, friendly service in a high-pressure environment; upheld food hygiene, workplace safety, and operational quality standards.</li>
-          <li>Handled customer transactions, managed order throughput during peak rush periods, and assisted shift leaders by maintaining inventory tracking and checklists.</li>
-          <li>Developed cross-functional teamwork, punctuality, and time-critical communication under pressure — key transferable skills for collaborative data engineering.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
+  <!-- PROJECTS / BUILDS -->
   <section id="projects">
-    <h2>Featured Engineering & Machine Learning Builds</h2>
+    <div class="section-header">
+      <span class="section-tag">// LABORATORY REPOSITORY</span>
+      <h2>Featured Engineering & ML Builds</h2>
+    </div>
     <div class="grid">
+
+      <!-- BUILD 1 -->
       <div class="card">
-        <h3>🏎️ Industrial EV Digital Twin & AI Physics Surrogate</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/ai-mechanical-engineering-digital-twin" target="_blank">View Repository</a></p>
-        <p>Physics-informed EV digital twin ingesting multi-channel battery and kinematic telemetry. Trained AI surrogate neural regressors predicting 8-hour 3D CFD aerodynamics in <strong>&lt; 0.05 ms (R² &gt; 0.99)</strong> with SciPy SLSQP active flap optimization.</p>
-        <p><strong>Tech:</strong> Python, Scikit-Learn, SciPy, DuckDB, Snappy Parquet, Apache Airflow, Terraform</p>
+        <div class="card-top">
+          <h3>🏎️ Industrial EV Digital Twin & AI Physics Surrogate</h3>
+          <p class="meta-line">// 0.05ms CFD INFERENCE • R² > 0.99</p>
+          <p>Physics-informed EV digital twin ingesting battery thermal and kinematic telemetry streams. Replaced 8-hour 3D CFD aerodynamic simulations with sub-millisecond AI surrogate regressors and SciPy SLSQP active aero flap optimization.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Scikit-Learn</span>
+            <span class="tech-pill">SciPy</span>
+            <span class="tech-pill">DuckDB</span>
+            <span class="tech-pill">Parquet</span>
+            <span class="tech-pill">Airflow</span>
+            <span class="tech-pill">Terraform</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/ai-mechanical-engineering-digital-twin" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 2 -->
       <div class="card">
-        <h3>☁️ AWS Serverless Data Analytics Lakehouse</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/aws-serverless-data-analytics-lakehouse" target="_blank">View Repository</a></p>
-        <p>Automated serverless lakehouse and SLA monitoring pipeline on AWS with Glue Catalog crawlers and Athena. Slashed byte-scan query costs by <strong>85%</strong> using Snappy Parquet partitioning and 10 GB circuit breakers.</p>
-        <p><strong>Tech:</strong> Amazon S3, AWS Glue, Amazon Athena, Amazon QuickSight, Terraform, SQL</p>
+        <div class="card-top">
+          <h3>☁️ AWS Serverless Data Analytics Lakehouse</h3>
+          <p class="meta-line">// -85% SCAN COST • 10GB CIRCUIT BREAKERS</p>
+          <p>Architected an automated S3, Glue Catalog, and Athena serverless lakehouse. Slashed query byte-scan costs by 85% with Snappy Parquet partitioning and 4-pillar analytics reporting.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">Amazon S3</span>
+            <span class="tech-pill">AWS Glue</span>
+            <span class="tech-pill">Amazon Athena</span>
+            <span class="tech-pill">QuickSight</span>
+            <span class="tech-pill">Terraform</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/aws-serverless-data-analytics-lakehouse" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 3 -->
       <div class="card">
-        <h3>📺 Channel 4 Big Data Ad Impression Pipeline</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/channel4-bigdata-ad-pipeline" target="_blank">View Repository</a></p>
-        <p>Automated 2:00 AM nightly Big Data lakehouse ingesting multi-format ad logs (JSON, CSV, XML) across Smart TVs and web players. Orchestrated PySpark transformations on AWS EMR with Apache Airflow DAGs.</p>
-        <p><strong>Tech:</strong> PySpark, AWS EMR, Apache Airflow, DuckDB, Snappy Parquet, Terraform</p>
+        <div class="card-top">
+          <h3>📺 Channel 4 Big Data Ad Impression Pipeline</h3>
+          <p class="meta-line">// 2:00 AM AUTONOMOUS • PYSPARK ON EMR</p>
+          <p>Automated nightly Big Data lakehouse ingesting multi-format ad logs (JSON, CSV, XML) across Smart TVs and web players, computing regional eCPM yield curves via PySpark on AWS EMR.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">PySpark</span>
+            <span class="tech-pill">AWS EMR</span>
+            <span class="tech-pill">Apache Airflow</span>
+            <span class="tech-pill">DuckDB</span>
+            <span class="tech-pill">Parquet</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/channel4-bigdata-ad-pipeline" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 4 -->
       <div class="card">
-        <h3>🚀 Sales Forecasting MLOps & GenAI System</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/DATA-ANALYSIS-FOR-DEVOPS-MLOPS-GENAI" target="_blank">View Repository</a></p>
-        <p>Production sales forecasting platform combining ML, generative AI (OpenAI GPT-4), FastAPI REST microservice, Docker containerization, Kubernetes horizontal scaling, and Jenkins CI/CD.</p>
-        <p><strong>Tech:</strong> FastAPI, OpenAI GPT-4, Scikit-learn, Docker, Kubernetes, Jenkins, Power BI</p>
+        <div class="card-top">
+          <h3>🚀 Sales Forecasting MLOps & GenAI System</h3>
+          <p class="meta-line">// KUBERNETES • DOCKER • JENKINS CI/CD</p>
+          <p>Production forecasting platform combining ML, generative AI (OpenAI GPT-4), FastAPI REST microservice, Docker containerization, Kubernetes horizontal scaling, and Jenkins CI/CD.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">OpenAI GPT-4</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Kubernetes</span>
+            <span class="tech-pill">Jenkins</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/DATA-ANALYSIS-FOR-DEVOPS-MLOPS-GENAI" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 5 -->
       <div class="card">
-        <h3>🌧️ Australian Rainfall Forecasting (Dissertation)</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/Rainfall-prediction" target="_blank">View Repository</a></p>
-        <p>Academic research dissertation forecasting weather patterns across Australia. Implemented XGBoost, Random Forest, and Gradient Boosting with PyCaret AutoML and ROC-AUC diagnostics.</p>
-        <p><strong>Tech:</strong> Python, PyCaret AutoML, Scikit-learn, XGBoost, Pandas, Statsmodels, LaTeX</p>
+        <div class="card-top">
+          <h3>🌧️ Australian Rainfall Forecasting (Dissertation)</h3>
+          <p class="meta-line">// PYCARET AUTOML • ROC-AUC DIAGNOSTICS</p>
+          <p>Academic research dissertation forecasting weather patterns across Australia. Implemented XGBoost, Random Forest, and Gradient Boosting with PyCaret AutoML and LaTeX documentation.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">PyCaret</span>
+            <span class="tech-pill">XGBoost</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">LaTeX</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/Rainfall-prediction" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 6 -->
       <div class="card">
-        <h3>🏥 NHS Patient Healthcare Analytics Lakehouse</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/nhs-patient-healthcare-analytics-lakehouse" target="_blank">View Repository</a></p>
-        <p>Automated cloud lakehouse for hospital A&E emergency waiting times with SHA-256 cryptographic PII pseudonymization ensuring GDPR/HIPAA compliance.</p>
-        <p><strong>Tech:</strong> Terraform, AWS S3, AWS Glue, Amazon Athena, Apache Airflow, Snappy Parquet</p>
+        <div class="card-top">
+          <h3>🏥 NHS Patient Healthcare Analytics Lakehouse</h3>
+          <p class="meta-line">// SHA-256 PII ANONYMIZATION • GDPR/HIPAA</p>
+          <p>Automated cloud lakehouse for hospital A&E emergency waiting times with SHA-256 cryptographic PII pseudonymization ensuring GDPR/HIPAA compliance.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">Terraform</span>
+            <span class="tech-pill">AWS S3</span>
+            <span class="tech-pill">AWS Glue</span>
+            <span class="tech-pill">Athena</span>
+            <span class="tech-pill">Airflow</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/nhs-patient-healthcare-analytics-lakehouse" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 7 -->
       <div class="card">
-        <h3>👁️ Computer Vision on Autopilot with AutoGluon</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/aws-autogluon-image-classification" target="_blank">View Repository</a></p>
-        <p>Automated deep learning computer vision pipeline with AWS AutoGluon Vision, handling automatic transfer learning, backbone selection, and inference for medical Chest X-Rays and retail catalogs.</p>
-        <p><strong>Tech:</strong> Python, AWS AutoGluon, OpenCV, Deep Learning, CNNs</p>
+        <div class="card-top">
+          <h3>👁️ Deep Computer Vision with AWS AutoGluon</h3>
+          <p class="meta-line">// AUTOMATED TRANSFER LEARNING • CNNS</p>
+          <p>Automated computer vision pipeline with AWS AutoGluon Vision, handling automatic transfer learning, backbone selection, and inference for medical Chest X-Rays and retail catalogs.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">AutoGluon</span>
+            <span class="tech-pill">OpenCV</span>
+            <span class="tech-pill">Deep Learning</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/aws-autogluon-image-classification" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 8 -->
       <div class="card">
-        <h3>📊 Global Sales Cleansing & Copilot Analysis</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/global-sales-data-analysis-excel-copilot" target="_blank">View Repository</a></p>
-        <p>Automated multi-market data cleansing, multi-currency normalization to USD, and dynamic pivot modeling with Power Query and Microsoft Copilot.</p>
-        <p><strong>Tech:</strong> Microsoft Excel, Microsoft Copilot, Power Query, Dynamic Arrays</p>
+        <div class="card-top">
+          <h3>📊 Global Sales Cleansing & Copilot Analysis</h3>
+          <p class="meta-line">// POWER QUERY • USD NORMALIZATION</p>
+          <p>Automated multi-market sales cleansing, currency normalization to USD, and dynamic pivot modeling with Power Query and Microsoft Copilot AI.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">Excel</span>
+            <span class="tech-pill">Copilot AI</span>
+            <span class="tech-pill">Power Query</span>
+            <span class="tech-pill">Dynamic Arrays</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/global-sales-data-analysis-excel-copilot" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
+      <!-- BUILD 9 -->
       <div class="card">
-        <h3>📚 Data Engineering Master Study Blueprints</h3>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07/data-engineering-study-materials" target="_blank">View Repository</a></p>
-        <p>Curated standalone study repository containing 8 comprehensive architectural guides: AWS Lakehouses, Advanced SQL, R, Excel & Power Query, Jira Agile, Slack DevOps, and Web2 vs Web3.</p>
-        <p><strong>Tech:</strong> Markdown, Cloud Architecture, SQL Tuning, DevOps Workflows</p>
+        <div class="card-top">
+          <h3>📚 Data Engineering Master Study Blueprints</h3>
+          <p class="meta-line">// 8 ARCHITECTURAL MASTER GUIDES</p>
+          <p>Curated standalone study repository containing 8 comprehensive architectural guides: AWS Lakehouses, Advanced SQL, R, Excel & Power Query, Jira Agile, Slack DevOps, and Web2 vs Web3.</p>
+        </div>
+        <div>
+          <div class="tech-pill-container">
+            <span class="tech-pill">AWS Lakehouse</span>
+            <span class="tech-pill">SQL Optimization</span>
+            <span class="tech-pill">DevOps</span>
+            <span class="tech-pill">Markdown</span>
+          </div>
+          <a class="card-link" href="https://github.com/Xclipxz07/data-engineering-study-materials" target="_blank">Access Repository →</a>
+        </div>
       </div>
+
     </div>
   </section>
 
+  <!-- SKILLS / ARSENAL -->
   <section id="skills">
-    <h2>Technical Skills & Arsenal</h2>
-    <div class="grid">
-      <div class="card">
+    <div class="section-header">
+      <span class="section-tag">// STARK ARSENAL</span>
+      <h2>Technical Capabilities</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
         <h3>💻 Programming Languages</h3>
-        <ul class="skills">
-          <li>Python</li>
-          <li>Advanced SQL (CTEs, Window Functions)</li>
-          <li>R</li>
-          <li>Bash / Shell</li>
-          <li>JavaScript</li>
-          <li>LaTeX</li>
-        </ul>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Advanced SQL (CTEs, Window Functions)</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">Bash / Shell</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">LaTeX</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>☁️ Cloud & Big Data</h3>
-        <ul class="skills">
-          <li>Amazon AWS (S3, Glue, Athena)</li>
-          <li>Amazon Redshift & QuickSight</li>
-          <li>AWS EMR (PySpark)</li>
-          <li>Google Cloud BigQuery</li>
-          <li>DuckDB & Snappy Parquet</li>
-        </ul>
+
+      <div class="skill-card">
+        <h3>☁️ Cloud & Lakehouses</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Amazon AWS (S3, Glue, Athena)</span>
+          <span class="skill-tag">Amazon Redshift</span>
+          <span class="skill-tag">AWS EMR (PySpark)</span>
+          <span class="skill-tag">Google BigQuery</span>
+          <span class="skill-tag">DuckDB</span>
+          <span class="skill-tag">Snappy Parquet</span>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="skill-card">
         <h3>🧠 Machine Learning & AI</h3>
-        <ul class="skills">
-          <li>Scikit-Learn & XGBoost</li>
-          <li>AWS AutoGluon AutoML</li>
-          <li>PyTorch & TensorFlow</li>
-          <li>SciPy Optimization</li>
-          <li>OpenAI GPT-4 & Gemini API</li>
-        </ul>
+        <div class="skill-tags">
+          <span class="skill-tag">Scikit-Learn</span>
+          <span class="skill-tag">XGBoost</span>
+          <span class="skill-tag">AWS AutoGluon AutoML</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">SciPy Optimization</span>
+          <span class="skill-tag">OpenAI GPT-4</span>
+          <span class="skill-tag">Gemini API</span>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="skill-card">
         <h3>⚙️ DevOps & CI/CD</h3>
-        <ul class="skills">
-          <li>Terraform IaC</li>
-          <li>Docker Containerization</li>
-          <li>Kubernetes Orchestration</li>
-          <li>Jenkins CI/CD Pipelines</li>
-          <li>Git & GitHub Actions</li>
-        </ul>
+        <div class="skill-tags">
+          <span class="skill-tag">Terraform IaC</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">Jenkins CI/CD</span>
+          <span class="skill-tag">Git & GitHub Actions</span>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="skill-card">
         <h3>📊 BI & Visual Analytics</h3>
-        <ul class="skills">
-          <li>Microsoft Power BI</li>
-          <li>Excel & Copilot AI</li>
-          <li>Plotly & Seaborn</li>
-          <li>Streamlit Dashboards</li>
-          <li>FastAPI REST APIs</li>
-        </ul>
+        <div class="skill-tags">
+          <span class="skill-tag">Microsoft Power BI</span>
+          <span class="skill-tag">Excel & Copilot AI</span>
+          <span class="skill-tag">Plotly</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">FastAPI REST APIs</span>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="skill-card">
         <h3>🛡️ Data Engineering</h3>
-        <ul class="skills">
-          <li>Apache Airflow Orchestration</li>
-          <li>PySpark Distributed ETL</li>
-          <li>Pandas & NumPy</li>
-          <li>SHA-256 PII Anonymization</li>
-          <li>Data Modeling & Star Schemas</li>
-        </ul>
+        <div class="skill-tags">
+          <span class="skill-tag">Apache Airflow</span>
+          <span class="skill-tag">PySpark Distributed ETL</span>
+          <span class="skill-tag">Pandas & NumPy</span>
+          <span class="skill-tag">SHA-256 PII Cryptography</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="certifications">
-    <h2>Verified Certifications & Clearances</h2>
+  <!-- FIELD EXPERIENCE -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-tag">// DEPLOYMENT RECORD</span>
+      <h2>Professional Work Experience</h2>
+    </div>
     <div class="grid">
       <div class="card">
-        <h3>🎖️ Cloud & AI Certifications</h3>
-        <ul>
-          <li><strong>Microsoft Data Analysis (SQL, Excel, Power BI):</strong> <a href="https://coursera.org/verify/specialization/VXYOBGDSIQOO" target="_blank">Verify (ID: VXYOBGDSIQOO)</a></li>
-          <li><strong>Gemini for Developers Specialization:</strong> <a href="https://coursera.org/verify/specialization/DMVKPELEY3J2" target="_blank">Google DeepMind (ID: DMVKPELEY3J2)</a></li>
-          <li><strong>Google AI Professional Certificate:</strong> <a href="https://coursera.org/verify/professional-cert/FW6A17MGN8U3" target="_blank">Google (ID: FW6A17MGN8U3)</a></li>
-          <li><strong>AI for Mechanical Engineers:</strong> <a href="https://coursera.org/verify/specialization/BUUPCEOS9DG1" target="_blank">Univ. of Michigan (ID: BUUPCEOS9DG1)</a></li>
-          <li><strong>Getting Started with Data Analytics on AWS:</strong> <a href="https://coursera.org/verify/0R8IQQB4CTI1" target="_blank">AWS (ID: 0R8IQQB4CTI1)</a></li>
-          <li><strong>Scikit-Learn ML Classification:</strong> <a href="https://coursera.org/verify/8KLLIRRLXTWN" target="_blank">Coursera (ID: 8KLLIRRLXTWN)</a></li>
-          <li><strong>Image Classification on AWS AutoGluon:</strong> <a href="https://coursera.org/verify/MVVF8ARA6H2C" target="_blank">Coursera (ID: MVVF8ARA6H2C)</a></li>
-        </ul>
+        <div class="card-top">
+          <h3>Care Assistant & Data Analyst — Everycare Ltd</h3>
+          <p class="meta-line">// APRIL 2023 – JUNE 2026 • LONDON, UK</p>
+          <ul>
+            <li>Delivered person-centred care and maintained digital care observation logs, medication updates, and activity tracking in digital care systems while ensuring strict GDPR and safeguarding compliance.</li>
+            <li>Maintained and cleaned operational care records in Excel; engineered automated pivot models and dashboards tracking incident logs, attendance patterns, and staff allocations for shift leaders.</li>
+            <li>Analyzed care-related trends using Power BI to visualize medication timings, risk indicators, and response times; communicated weekly operational insights to senior management.</li>
+            <li>Wrote basic Python automation scripts to clean and preprocess raw care logs, reducing manual administrative workload by 40% and improving data accuracy for management audits.</li>
+          </ul>
+        </div>
       </div>
+
       <div class="card">
-        <h3>🗣️ Languages & UK Clearances</h3>
-        <ul>
-          <li><strong>English SELT ISE 1:</strong> Trinity College London <span style="color: #0071e3; font-weight: 600;">(Distinction in Speaking, Listening & Writing)</span></li>
-          <li><strong>Enhanced DBS Certification:</strong> Active & Verified (All UK background checks cleared)</li>
-          <li><strong>Languages:</strong> English (Fluent), Hindi (Native), Bengali (Native)</li>
-          <li><strong>UK Status:</strong> Available to Work (Skilled Worker Visa Sponsorship Required)</li>
-        </ul>
+        <div class="card-top">
+          <h3>Team Member — KFC (Demipower Ltd)</h3>
+          <p class="meta-line">// JANUARY 2021 – MARCH 2023 • LONDON, UK</p>
+          <ul>
+            <li>Delivered fast, friendly service in a high-pressure environment; upheld food hygiene, workplace safety, and operational quality standards.</li>
+            <li>Handled customer transactions, managed order throughput during peak rush periods, and assisted shift leaders by maintaining inventory tracking and checklists.</li>
+            <li>Developed cross-functional teamwork, punctuality, and time-critical communication under pressure — key transferable skills for collaborative data engineering.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Direct Uplink / Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:prabhatdhar32@gmail.com">prabhatdhar32@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="http://linkedin.com/in/prabhat-dhar-13723618b" target="_blank">linkedin.com/in/prabhat-dhar-13723618b</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Xclipxz07" target="_blank">github.com/Xclipxz07</a></p>
-    <p><strong>Interactive Portfolio:</strong> <a href="https://xclipxz07.github.io/Portfolio/">xclipxz07.github.io/Portfolio</a></p>
-    <p><strong>Location:</strong> London, UK</p>
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-header">
+      <span class="section-tag">// ACADEMIC ROOTS</span>
+      <h2>Physics & Data Science Foundation</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top">
+          <h3>🎓 PG Diploma in Data Science & Its Applications</h3>
+          <p class="meta-line">// UNIVERSITY OF ESSEX, UK (DISTINCTION LEVEL)</p>
+          <p>Graduated November 2022 with 165 credits. Advanced coursework in machine learning, distributed data processing, predictive modeling, statistical inference, and database architectures.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>⚛️ Bachelor of Science in Physics (Honours)</h3>
+          <p class="meta-line">// UNIVERSITY OF CALCUTTA, INDIA (7.240 CGPA)</p>
+          <p>Graduated August 2021. Intensive study of classical mechanics, thermodynamics, quantum physics, mathematical methods, calculus, and electrodynamics.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>🔬 I.S.C (12th Grade - Pure Science & Math)</h3>
+          <p class="meta-line">// ST. XAVIER'S INSTITUTION, KOLKATA (85.0%)</p>
+          <p>Pure Science stream with Physics, Chemistry, Mathematics, and Computer Science.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>📐 I.C.S.E (10th Grade)</h3>
+          <p class="meta-line">// ST. XAVIER'S INSTITUTION, KOLKATA (93.8%)</p>
+          <p>High distinction academic record across mathematics and pure sciences.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-header">
+      <span class="section-tag">// CREDENTIALS & CLEARANCES</span>
+      <h2>Verified Proof</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top">
+          <h3>🎖️ Verified Cloud & AI Certifications</h3>
+          <ul>
+            <li><strong>Microsoft Data Analysis (SQL, Excel, Power BI):</strong> <a class="card-link" href="https://coursera.org/verify/specialization/VXYOBGDSIQOO" target="_blank" style="display:inline;">Verify (ID: VXYOBGDSIQOO)</a></li>
+            <li><strong>Gemini for Developers Specialization:</strong> <a class="card-link" href="https://coursera.org/verify/specialization/DMVKPELEY3J2" target="_blank" style="display:inline;">Google DeepMind (ID: DMVKPELEY3J2)</a></li>
+            <li><strong>Google AI Professional Certificate:</strong> <a class="card-link" href="https://coursera.org/verify/professional-cert/FW6A17MGN8U3" target="_blank" style="display:inline;">Google (ID: FW6A17MGN8U3)</a></li>
+            <li><strong>AI for Mechanical Engineers:</strong> <a class="card-link" href="https://coursera.org/verify/specialization/BUUPCEOS9DG1" target="_blank" style="display:inline;">Univ. of Michigan (ID: BUUPCEOS9DG1)</a></li>
+            <li><strong>Getting Started with Data Analytics on AWS:</strong> <a class="card-link" href="https://coursera.org/verify/0R8IQQB4CTI1" target="_blank" style="display:inline;">AWS (ID: 0R8IQQB4CTI1)</a></li>
+            <li><strong>Scikit-Learn ML Classification:</strong> <a class="card-link" href="https://coursera.org/verify/8KLLIRRLXTWN" target="_blank" style="display:inline;">Coursera (ID: 8KLLIRRLXTWN)</a></li>
+            <li><strong>Image Classification on AWS AutoGluon:</strong> <a class="card-link" href="https://coursera.org/verify/MVVF8ARA6H2C" target="_blank" style="display:inline;">Coursera (ID: MVVF8ARA6H2C)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>🗣️ Languages & UK Clearances</h3>
+          <ul>
+            <li><strong>English SELT ISE 1:</strong> Trinity College London <span style="color: var(--arc-cyan); font-weight: 600;">(Distinction in Speaking, Listening & Writing)</span></li>
+            <li><strong>Enhanced DBS Certification:</strong> Active & Verified (All UK background checks cleared)</li>
+            <li><strong>Languages:</strong> English (Fluent), Hindi (Native), Bengali (Native)</li>
+            <li><strong>UK Work Status:</strong> Available Immediately (UK Skilled Worker Visa Sponsorship Required)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-tag">// DIRECT UPLINK</span>
+      <h2>Initiate Contact</h2>
+    </div>
+    <div style="background: var(--bg-card); border: 1.5px solid var(--border-glow); box-shadow: var(--glow-cyan); border-radius: 16px; padding: 40px; text-align: center; max-width: 800px; margin: 0 auto;">
+      <p style="font-size: 18px; color: var(--text-main); margin-bottom: 24px;">
+        Ready to architect high-performance cloud data pipelines, build lightning-fast AI surrogates, and deliver massive value from Day 1.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+        <a class="btn" href="mailto:prabhatdhar32@gmail.com">📧 prabhatdhar32@gmail.com</a>
+        <a class="btn btn-secondary" href="http://linkedin.com/in/prabhat-dhar-13723618b" target="_blank">💼 LinkedIn Profile</a>
+        <a class="btn btn-secondary" href="https://github.com/Xclipxz07" target="_blank">🐙 GitHub Labs</a>
+      </div>
+      <p style="font-size: 13px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+        LOCATION: LONDON, UK • SPONSORSHIP: REQUIRED • RESPONSE TIME: &lt; 24 HOURS
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Prabhat Dhar • Engineered with Precision • London, UK</p>
+    <p>© 2026 Prabhat Dhar • Theoretical Physicist & Data Architect • London, UK</p>
   </footer>
 
   <!-- CHATBOT -->
-  <button class="chat-toggle" onclick="toggleChat()">💬</button>
+  <button class="chat-toggle" onclick="toggleChat()" title="Talk to AI Assistant">💬</button>
   <div class="chatbot" id="chatbot">
-    <div class="chatbot-header">Prabhat's AI Assistant</div>
+    <div class="chatbot-header">
+      <span>● JARVIS // PRABHAT'S AI ASSISTANT</span>
+      <span style="cursor:pointer;" onclick="toggleChat()">✕</span>
+    </div>
     <div class="chatbot-messages" id="messages">
-      <div class="msg bot">Hi! I'm Prabhat's interactive AI assistant. Ask me about his data engineering pipelines, AI surrogate models, AWS lakehouses, or certifications!</div>
+      <div class="msg bot">System online. I am Prabhat's AI assistant. Ask me about his data architectures, AI surrogate models, AWS lakehouses, physics background, or UK work availability.</div>
     </div>
     <div class="chatbot-input">
-      <input id="userInput" placeholder="Type a question..." onkeydown="if(event.key==='Enter') sendMessage()" />
-      <button onclick="sendMessage()">Send</button>
+      <input id="userInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter') sendMessage()" />
+      <button onclick="sendMessage()">SEND</button>
     </div>
   </div>
 
@@ -775,18 +1140,18 @@
       const messages = document.getElementById('messages');
       messages.innerHTML += `<div class='msg user'>${input.value}</div>`;
 
-      let reply = "I can tell you about Prabhat's skills, cloud lakehouse projects, AI models, education, or work experience. What would you like to know?";
-      if (msg.includes('skill') || msg.includes('stack')) {
+      let reply = "I can tell you about Prabhat's skills, cloud lakehouses, AI surrogate models, physics background, or work experience. What would you like to explore?";
+      if (msg.includes('skill') || msg.includes('stack') || msg.includes('arsenal')) {
         reply = "Prabhat specializes in Python, Advanced SQL, AWS (S3, Glue, Athena, Redshift, EMR PySpark), Apache Airflow, Docker, Kubernetes, Terraform, Scikit-Learn, and Power BI.";
-      } else if (msg.includes('project') || msg.includes('ev') || msg.includes('lakehouse') || msg.includes('cloud')) {
-        reply = "Prabhat has engineered featured builds including: 1) EV Digital Twin with AI surrogates predicting 8-hr CFD aerodynamics in <0.05ms, 2) AWS Serverless Lakehouse cutting query scan costs by 85%, 3) Channel 4 Big Data PySpark/Airflow ad pipeline, and 4) MLOps Sales Forecasting deployed on Kubernetes.";
-      } else if (msg.includes('experience') || msg.includes('job') || msg.includes('everycare')) {
+      } else if (msg.includes('project') || msg.includes('ev') || msg.includes('lakehouse') || msg.includes('cfd') || msg.includes('build')) {
+        reply = "Key builds include: 1) EV Digital Twin (<0.05ms CFD AI surrogate), 2) AWS Serverless Lakehouse (-85% query scan costs), 3) Channel 4 Big Data PySpark ETL on AWS EMR, and 4) MLOps Sales Forecasting deployed on Kubernetes.";
+      } else if (msg.includes('physics') || msg.includes('education') || msg.includes('degree') || msg.includes('essex') || msg.includes('calcutta')) {
+        reply = "Prabhat holds a B.Sc. in Physics from the University of Calcutta (7.24 CGPA) and a Postgraduate Diploma in Data Science from the University of Essex (165 credits, Distinction Level).";
+      } else if (msg.includes('experience') || msg.includes('everycare') || msg.includes('job')) {
         reply = "Prabhat works as a Care Assistant & Data Analyst at Everycare Ltd (April 2023 – June 2026), building automated Excel pivot models, Power BI operational dashboards, and Python ETL scripts.";
-      } else if (msg.includes('education') || msg.includes('degree') || msg.includes('university')) {
-        reply = "Prabhat holds a PG Diploma in Data Science from the University of Essex (2022, Distinction Level) and a Bachelor of Science in Physics from the University of Calcutta (2021).";
       } else if (msg.includes('cert') || msg.includes('clearance') || msg.includes('dbs') || msg.includes('selt')) {
-        reply = "Prabhat holds verified credentials from Microsoft (Data Analysis), Google DeepMind (Gemini), Google (AI Professional), Univ. of Michigan (AI Mechanical Engineering), AWS, plus Trinity College London English SELT ISE 1 (Distinction) and an active Enhanced DBS.";
-      } else if (msg.includes('visa') || msg.includes('status') || msg.includes('sponsor') || msg.includes('work')) {
+        reply = "Prabhat holds verified certifications from Microsoft (Data Analysis), Google DeepMind (Gemini), Google (AI Professional), Univ. of Michigan (AI Mechanical Engineering), AWS, plus Trinity College London English SELT ISE 1 (Distinction) and an active Enhanced DBS.";
+      } else if (msg.includes('visa') || msg.includes('status') || msg.includes('sponsor') || msg.includes('work') || msg.includes('uk')) {
         reply = "Prabhat is based in London, UK, and is actively available for full-time Data Analyst, Cloud Data Engineer, or ML Engineer roles (UK Skilled Worker Visa Sponsorship Required).";
       }
 
@@ -795,7 +1160,6 @@
       input.value = '';
     }
 
-    // Close chatbot when clicking outside
     document.addEventListener('click', function (event) {
       const bot = document.getElementById('chatbot');
       const toggleBtn = document.querySelector('.chat-toggle');
