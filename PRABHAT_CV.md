@@ -6,7 +6,9 @@
 ---
 
 ## PROFESSIONAL SUMMARY
-I started in **Pure Physics (B.Sc., University of Calcutta)** because understanding how complex systems work from first principles matters before writing a single line of code. I followed that up with a **Postgraduate Diploma in Data Science at the University of Essex**. Some people just analyze data; I build the entire pipeline from scratch. Whether it is training machine learning models that run in milliseconds, architecting automated cloud lakehouses on AWS, or building dashboards that make complex numbers obvious — I make systems faster, smarter, and completely automated. **Based in London, UK, and actively available for full-time roles (UK Skilled Worker Visa Sponsorship Required).**
+> *“If a human has to manually click a button every morning, the engineer hasn’t finished the job yet.”*
+
+I combine a foundation in **Pure Physics (B.Sc., University of Calcutta)** with advanced **Data Science (PGDip, University of Essex)**. My approach is simple: understand systems from first principles, automate the heavy lifting, and build solutions that work fast and never break. Rather than just analyzing numbers, I architect automated cloud lakehouses on AWS, deploy sub-millisecond machine learning models in Python, and build clear executive dashboards that make complex decisions effortless. **Based in London, UK, and actively available for full-time roles (UK Skilled Worker Visa Sponsorship Required).**
 
 ---
 
