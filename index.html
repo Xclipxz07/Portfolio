@@ -251,47 +251,6 @@
       color: var(--arc-cyan);
     }
 
-    /* METRICS BAR */
-    .metrics-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      max-width: 1060px;
-      margin: 40px auto 0 auto;
-      padding: 0 20px;
-    }
-
-    .metric-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .metric-box:hover {
-      border-color: var(--border-glow);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .metric-val {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--arc-cyan);
-      margin-bottom: 4px;
-    }
-
-    .metric-label {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      font-weight: 600;
-    }
-
     /* SECTIONS */
     section {
       padding: 85px 24px;
@@ -674,26 +633,6 @@
       <a class="btn" href="Prabhatcv.pdf" download="Prabhat_Dhar_CV.pdf">📄 Download Stark CV (PDF)</a>
       <a class="btn btn-secondary" href="https://github.com/Xclipxz07" target="_blank">🐙 Access GitHub Labs</a>
       <a class="btn btn-secondary" href="http://linkedin.com/in/prabhat-dhar-13723618b" target="_blank">💼 LinkedIn Uplink</a>
-    </div>
-
-    <!-- LIVE TELEMETRY / METRICS -->
-    <div class="metrics-bar">
-      <div class="metric-box">
-        <div class="metric-val">&lt; 0.05 ms</div>
-        <div class="metric-label">AI Surrogate CFD Inference</div>
-      </div>
-      <div class="metric-box">
-        <div class="metric-val">-85%</div>
-        <div class="metric-label">AWS Athena Scan Costs</div>
-      </div>
-      <div class="metric-box">
-        <div class="metric-val">2:00 AM</div>
-        <div class="metric-label">Autonomous Airflow ETL</div>
-      </div>
-      <div class="metric-box">
-        <div class="metric-val">165 Credits</div>
-        <div class="metric-label">Essex Data Science (Distinction)</div>
-      </div>
     </div>
   </header>
 
