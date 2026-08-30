@@ -1,6 +1,6 @@
 # PRABHAT DHAR
 **Theoretical Physicist & Data Architect | Cloud & Machine Learning Specialist**  
-📍 London, UK | 📧 [prabhatdhar32@gmail.com](mailto:prabhatdhar32@gmail.com) | 💼 [linkedin.com/in/prabhat-dhar](http://linkedin.com/in/prabhat-dhar-13723618b) | 🐙 [github.com/Xclipxz07](https://github.com/Xclipxz07) | 🌐 [xclipxz07.github.io/Portfolio](https://xclipxz07.github.io/Portfolio/)  
+📍 London, UK | 📧 [prabhatdhar32@gmail.com](mailto:prabhatdhar32@gmail.com) | 💼 [linkedin.com/in/prabhat-dhar](https://www.linkedin.com/in/prabhat-dhar-13723618b) | 🐙 [github.com/Xclipxz07](https://github.com/Xclipxz07) | 🌐 [xclipxz07.github.io/Portfolio](https://xclipxz07.github.io/Portfolio/)  
 🇬🇧 **UK Work Status:** Available to Work (UK Visa Sponsorship Required / Skilled Worker Route Eligible)
 
 ---
